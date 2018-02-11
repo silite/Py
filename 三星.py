@@ -31,20 +31,20 @@ def LogIn():
     )
 def JudgeRe(list_,method): #method分前中后
     num_1 = list_[0].split(',') #中奖号码
-    #num_2 = list_[1].split(',')
+    num_2 = list_[1].split(',')
     if method == 'hou' :
         method_zh = '后三'
         num_1 = num_1[2:]
-        #num_2 = num_2[2:]
+        num_2 = num_2[2:]
     elif method == 'zhong' :
         method_zh = '中三'
         num_1 = num_1[1:4]
-        #num_2 = num_2[1:4]
+        num_2 = num_2[1:4]
     elif method == 'qian' :
         method_zh = '前三'
         num_1 = num_1[:3]
-        #num_2 = num_2[:3]
-    temp = list(set(num_1))
+        num_2 = num_2[:3]
+    temp = list(set(num_1 + num_2))
     rejudge = []
     for i in range(0,10):
         i = str(i)
@@ -91,7 +91,7 @@ def OpStr(result):
         temp.append(str_)
     return temp
 def submit():
-    time.sleep(1)
+    #time.sleep(1)
     wait.until(
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div/div[3]'))
     )
@@ -125,20 +125,23 @@ def send_all_me(xpath,result):
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div/div[3]/textarea'))
     )
     send_result.send_keys(result[0])
+    time.sleep(0.5)
     submit()
     send_result.send_keys(result[1])
+    time.sleep(0.5)
     submit()
+    time.sleep(0.5)
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[3]/p/label[2]')
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/ul/li[3]')
     time.sleep(0.5)
-	alert = wait.until(
-		EC.element_to_be_clickable((By.XPATH ,'//*[@id="layermbox0"]/div[2]/div/div/div[2]/span'))    
-	)
-	alert.click()
-    sure_2 = wait.until(
-        EC.element_to_be_clickable((By.XPATH,'//*[@id="layermbox0"]/div[2]/div/div/div[2]/span'))
+    alert = wait.until(
+        EC.element_to_be_clickable((By.XPATH ,'//*[@id="layermbox0"]/div[2]/div/div/div[2]/span'))    
     )
-    sure_2.click()
+    alert.click()
+    #sure_2 = wait.until(
+    #    EC.element_to_be_clickable((By.XPATH,'//*[@id="layermbox0"]/div[2]/div/div/div[2]/span'))
+    #)
+    #sure_2.click()
     week_num = wait.until(
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[1]/tbody/tr[3]/td/input'))
     )
@@ -159,7 +162,7 @@ def wait_to_be_num():
     )
 def PreAddNum(method):
     WinningNum = re.compile('class="numbers">(.*?)<').findall(driver.page_source)
-    print("--- 此期号码 ---:\n--- " + WinningNum[0] + " ---\n---")
+    print("--- 此两期号码 ---:\n--- " + WinningNum[0] + " ---\n--- " + WinningNum[1] + “ ---\n”)
     return OpStr(JudgeRe(WinningNum,method))
 def FirstIn():
     try:
