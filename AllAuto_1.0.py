@@ -142,9 +142,7 @@ def Buy():
     money = driver.find_element_by_xpath(money_xpath).text
     if money == '674.24':
         click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/a')
-        i = input("    是否确认投注?\n")
-        if i == 'y':
-            click('//*[@id="layermbox1"]/div[2]/div/div/div[2]/span[2]')
+        #click('//*[@id="layermbox1"]/div[2]/div/div/div[2]/span[2]')
 def GetTime():
     wait.until(
         EC.presence_of_all_elements_located((By.XPATH ,'/html/body/div/div[2]/div[1]/div[2]/em'))    
@@ -176,7 +174,7 @@ def main():
             if len(result_hou) == 2:
                 housan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[6]'
                 send_all_me(housan,result_hou)
-                #Buy()
+                Buy()
             else:
                 print('后三暂无符合')
         nowTime = waitTime(GetTime() ,30 ,41)
@@ -189,7 +187,7 @@ def main():
             if len(result_zhong) == 2:
                 zhongsan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[5]'
                 send_all_me(zhongsan,result_zhong)
-                #Buy()
+                Buy()
             else:
                 print('中三暂无符合')
         nowTime = waitTime(GetTime() ,20 ,31)
@@ -202,7 +200,7 @@ def main():
             if len(result_qian) == 2:
                 qiansan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[4]'
                 send_all_me(qiansan,result_qian)
-                #Buy()
+                Buy()
             else:
                 print('前三暂无符合')
                 time.sleep(5)
