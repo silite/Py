@@ -4,16 +4,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = 'zy0108'
-pwd = 'zy731027'
-driver = webdriver.Firefox()
+user = '15648807923'
+pwd = '15648807923'
+driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
 wait_short = WebDriverWait(driver, 1)
 comp = ['0358','1469','0257','1368','2479']
-
 def LogIn():
-
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
     )
@@ -53,8 +51,6 @@ def JudgeRe(list_,method): #method分前中后
     if len(rejudge) == 0:
         print("--- 无剩余数字 ---")
     else:
-        print("--- 剩余可选数字: ---")
-        print(rejudge)
         if len(rejudge) < 4:
             return ''
         else:
@@ -64,7 +60,7 @@ def JudgeRe(list_,method): #method分前中后
                     if j in ''.join(rejudge):
                         count += 1
                         if(count == 4):
-                            print("--- 符合给定: " + method_zh + ' ' + i + " 正在打印 ---")
+                            print("    符合给定: " + method_zh + ' ' + i + " 正在打印 ")
                             return i
             return ''
 def OpStr(result):
@@ -91,23 +87,14 @@ def OpStr(result):
         temp.append(str_)
     return temp
 def submit():
-    #time.sleep(1)
+    time.sleep(1)
     wait.until(
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div/div[3]'))
     )
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/a')
 def click(x):
-    #time.sleep(0.2)
+    time.sleep(0.3)
     driver.find_element_by_xpath(x).click()
-def AlertRate():
-    time.sleep(0.2)
-    try:
-        sure = wait_short.until(
-            EC.visibility_of_element_located((By.XPATH,'//*[@id="layermbox1"]/div[2]/div/div/div[2]/span'))
-        )
-        sure.click()
-    except:
-        return 0
 def send_all_me(xpath,result):
     method = wait.until(
         EC.presence_of_element_located((By.XPATH,xpath))
@@ -125,23 +112,16 @@ def send_all_me(xpath,result):
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div/div[3]/textarea'))
     )
     send_result.send_keys(result[0])
-    time.sleep(0.5)
     submit()
     send_result.send_keys(result[1])
-    time.sleep(0.5)
     submit()
-    time.sleep(0.5)
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[3]/p/label[2]')
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/ul/li[3]')
-    time.sleep(0.5)
+    time.sleep(1)
     alert = wait.until(
         EC.element_to_be_clickable((By.XPATH ,'//*[@id="layermbox0"]/div[2]/div/div/div[2]/span'))    
     )
     alert.click()
-    #sure_2 = wait.until(
-    #    EC.element_to_be_clickable((By.XPATH,'//*[@id="layermbox0"]/div[2]/div/div/div[2]/span'))
-    #)
-    #sure_2.click()
     week_num = wait.until(
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[1]/tbody/tr[3]/td/input'))
     )
@@ -162,8 +142,19 @@ def wait_to_be_num():
     )
 def PreAddNum(method):
     WinningNum = re.compile('class="numbers">(.*?)<').findall(driver.page_source)
-    print("--- 此两期号码 ---:\n--- " + WinningNum[0] + " ---\n--- " + WinningNum[1] + “ ---\n”)
+    print("    此两期号码 :\n    " + WinningNum[0] + "\n    " + WinningNum[1] + "\n")
     return OpStr(JudgeRe(WinningNum,method))
+def Buy():
+    money_xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[2]/p/em[2]'
+    wait.until(
+        EC.presence_of_all_elements_located((By.XPATH ,money_xpath))    
+    )
+    money = driver.find_element_by_xpath(money_xpath).text
+    if money == '674.24':
+        click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/a')
+        i = input("    是否确认投注?\n")
+        if i == 'y':
+            click('//*[@id="layermbox1"]/div[2]/div/div/div[2]/span[2]')
 def FirstIn():
     try:
         sure_fir = wait_short.until(
@@ -177,17 +168,18 @@ try:
     driver.get('http://www.yfcp885.com/lottery/SSC/1000')
     FirstIn()
     while True:
-        flag = input("--- 是否开始判断后三 --- :  ")
+        flag = input("    是否开始判断后三?  ")
         if flag == "y" or flag == "Y":
             wait_to_be_num()
             result_hou = PreAddNum('hou')
             if len(result_hou) == 2:
                 housan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[6]'
                 send_all_me(housan,result_hou)
+                Buy()
             else:
-                print("--- 后三此次无符合 ---.\n")
+                print("    后三此次无符合.\n")
         flag = ''
-        flag = input("--- 是否开始判断中三 ---:  ")
+        flag = input("    是否开始判断中三?  ")
         if flag == "y" or flag == "Y":
             driver.refresh()
             FirstIn()
@@ -196,10 +188,11 @@ try:
             if len(result_zhong) == 2:
                 zhongsan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[5]'
                 send_all_me(zhongsan,result_zhong)
+                Buy()
             else:
-                print("--- 中三此次无符合 ---.\n")
+                print("    中三此次无符合.\n")
         flag = ''
-        flag = input("--- 是否开始判断前三 ---:  ")
+        flag = input("    是否开始判断前三?  ")
         if flag == "y" or flag == "Y":
             driver.refresh()
             FirstIn()
@@ -208,10 +201,11 @@ try:
             if len(result_qian) == 2:
                 qiansan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[4]'
                 send_all_me(qiansan,result_qian)
+                Buy()
             else:
-                print("--- 前三此次无符合 ---.\n")
+                print("    前三此次无符合.\n")
         flag = ''
-        flag = input("--- 是否刷新重新执行 ---:  ")
+        flag = input("    是否刷新重新执行?  ")
         if flag == 'y':
             driver.refresh()
             os.system('cls')
