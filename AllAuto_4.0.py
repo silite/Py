@@ -4,8 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-#user = '15648807923'
-#pwd = '15648807923'
 user = 'silite'
 pwd = 'silite'
 fireFoxOptions = webdriver.FirefoxOptions()
@@ -13,7 +11,6 @@ fireFoxOptions.set_headless()
 driver = webdriver.Firefox(firefox_options=fireFoxOptions)
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
-comp = ['0358','1469','0257','1368','2479','0123','1234','2345','3456','4567','5678','6789','7890','8901','9012']
 start_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 def LogIn():
     element_user = wait.until(
@@ -31,44 +28,45 @@ def LogIn():
     fin_driver = wait.until(
         EC.url_to_be('http://www.yfcp885.com/index')
     )
-def JudgeRe(list_,method): #method分前中后
-    num_1 = list_[0].split(',') #中奖号码
+def JudgeRe(list_,method):
+    num_1 = list_[0].split(',')
     num_2 = list_[1].split(',')
     num_3 = list_[2].split(',')
+    num_4 = list_[3].split(',')
     if method == 'hou' :
         method_zh = '后三'
         method_en = 'Back'
         num_1 = num_1[2:]
         num_2 = num_2[2:]
         num_3 = num_3[2:]
+        num_4 = num_4[2:]
     elif method == 'zhong' :
         method_zh = '中三'
         method_en = 'Mid'
         num_1 = num_1[1:4]
         num_2 = num_2[1:4]
         num_3 = num_3[1:4]
+        num_4 = num_4[1:4]
     elif method == 'qian' :
         method_zh = '前三'
         method_en = 'Front'
         num_1 = num_1[:3]
         num_2 = num_2[:3]
         num_3 = num_3[:3]
-    temp = list(set(num_1 + num_2 + num_3))
+        num_4 = num_4[:3]
+    temp = list(set(num_1 + num_2 + num_3 + num_4))
     rejudge = []
     for i in range(0,10):
         i = str(i)
         if i not in temp:
             rejudge.append(i)
-    for i in comp:
-        count = 0
-        for j in i:
-            if j in ''.join(rejudge):
-                count += 1
-                if(count == 4):
-                    PrintLog('' + method_en + ':' + i + '\n')
-                    print("符合给定: " + method_zh + ' ' + i + " 正在打印 ")
-                    return i
-    return ''
+    if len(rejudge) >= 4:
+        i = rejudge[0] + rejudge[1] + rejudge[2] + rejudge[3] 
+        PrintLog('' + method_en + ':' + i + '\n')
+        print("符合给定: " + method_zh + ' ' + i + " 正在打印 ")
+        return i
+    else:
+        return ''
 def OpStr(result):
     if len(result) == 0:
         return ''
@@ -149,7 +147,7 @@ def PrintLog(content):
         f.write(content)
 def PreAddNum(method):
     WinningNum = re.compile('class="numbers">(.*?)<').findall(driver.page_source)
-    PrintLog(" :" + WinningNum[0] + " | " + WinningNum[1] + " ")
+    PrintLog(" :" + WinningNum[0] + " | " + WinningNum[1] + " | " + WinningNum[2] + " ")
     return OpStr(JudgeRe(WinningNum,method))
 def Buy():
     money_xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[2]/p/em[2]'
