@@ -6,10 +6,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 user = 'silite'
 pwd = 'silite'
-fireFoxOptions = webdriver.FirefoxOptions()
-fireFoxOptions.set_headless()
-driver = webdriver.Firefox(firefox_options=fireFoxOptions)
-#driver = webdriver.Firefox()
+#fireFoxOptions = webdriver.FirefoxOptions()
+#fireFoxOptions.set_headless()
+#driver = webdriver.Firefox(firefox_options=fireFoxOptions)
+driver = webdriver.Firefox()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
 start_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
@@ -155,9 +155,9 @@ def wait_to_be_num():
 def PrintLog(content):
     with open('D:\log\d_' + start_time + '.txt' ,'a') as f:
         f.write(content)
-def PreAddNum(method, type_):
+def PreAddNum(method):
     WinningNum = re.compile('class="numbers">(.*?)<').findall(driver.page_source)
-    PrintLog(type_ + " " + WinningNum[0] + " | " + WinningNum[1] + " | " + WinningNum[2] + " | " + WinningNum[3] + "   ")
+    PrintLog("C_ " + WinningNum[0] + " | " + WinningNum[1] + " | " + WinningNum[2] + " | " + WinningNum[3] + "   ")
     return OpStr(JudgeRe(WinningNum,method))
 def Buy():
     money_xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[2]/p/em[2]'
@@ -194,74 +194,47 @@ def waitTime(nowTime ,l ,h = 210):
             nowTime = GetTime()
 def main():
     LogIn()
-    type_ = True
     while True:
         try:
-            if type_ == True:
-                url = 'http://www.yfcp885.com/lottery/SSC/1000'
-                zh = '重庆'
-                en = 'C_'
-            else:
-                url = 'http://www.yfcp885.com/lottery/SSC/1001'
-                zh = '新疆'
-                en = 'X_'
+            url = 'http://www.yfcp885.com/lottery/SSC/1000'
             driver.get(url)
-            if type_ == True:
-                Time = 190
-            else:
-                Time = 70
-            nowTime = waitTime(GetTime() ,Time)
-            if nowTime > Time:
-                #PrintLog(time.strftime("%H:%M:%S", time.localtime()) + '-' + str(nowTime))
+            nowTime = waitTime(GetTime() ,170)
+            if nowTime > 170:
                 wait_to_be_num()
-                result_hou = PreAddNum('hou', en)
+                result_hou = PreAddNum('hou')
                 if len(result_hou) == 2:
                     housan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[6]'
                     send_all_me(housan,result_hou)
                     Buy()
                 else:
                     PrintLog('BackNone\n')
-                    print(zh + '后三暂无符合')
-            if type_ == True:
-                Time = 170
-            else:
-                Time = 50
-            nowTime = waitTime(GetTime() ,Time)
-            if nowTime > Time:
+                    print('重庆后三暂无符合')
+            nowTime = waitTime(GetTime() ,130)
+            if nowTime > 130:
                 nowTime = GetTime()
-                #PrintLog(time.strftime("%H:%M:%S", time.localtime()) + '-' + str(nowTime))
                 wait_to_be_num()
-                result_zhong = PreAddNum('zhong', en)
+                result_zhong = PreAddNum('zhong')
                 if len(result_zhong) == 2:
                     zhongsan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[5]'
                     send_all_me(zhongsan,result_zhong)
                     Buy()
                 else:
                     PrintLog('MidNone\n')
-                    print(zh + '中三暂无符合')
-            if type_ == True:
-                Time = 150
-            else:
-                Time = 30
-            nowTime = waitTime(GetTime() ,Time)
-            if nowTime > Time:
+                    print('重庆中三暂无符合')
+            nowTime = waitTime(GetTime() ,90)
+            if nowTime > 90:
                 nowTime = GetTime()
-                #PrintLog(time.strftime("%H:%M:%S", time.localtime()) + '-' + str(nowTime))
                 wait_to_be_num()
-                result_qian = PreAddNum('qian', en)
+                result_qian = PreAddNum('qian')
                 if len(result_qian) == 2:
                     qiansan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[4]'
                     send_all_me(qiansan,result_qian)
                     Buy()
                 else:
                     PrintLog('FrontNone\n')
-                    print(zh + '前三暂无符合')
-                if type_ == True:
-                    time.sleep(5)
-                else:
-                    time.sleep(20)
+                    print('重庆前三暂无符合')
+                time.sleep(20)
                 os.system('cls')
-                type_ = not type_
         except Exception as e:
             #error = time.strftime("%H:%M:%S", time.localtime()) + '-' + 'ERROR:' + str(e) + '\n'
             #PrintLog(error)
