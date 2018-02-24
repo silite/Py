@@ -4,14 +4,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
+user = ''
+pwd = ''
 driver = webdriver.Firefox()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
 comp = ['0358','1469','0257','1368','2479','0123','1234','2345','3456','4567','5678','6789','7890','8901','9012']
 start_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 def LogIn():
+
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
     )

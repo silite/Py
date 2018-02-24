@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
+user = ''
+pwd = ''
 driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
@@ -21,6 +21,7 @@ comp = ['0156','0158','0167','0169','0178','0189',
 '2457','2459','2479',
 '3456','3458','3467','3469','3478','3489']
 def LogIn():
+
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
     )

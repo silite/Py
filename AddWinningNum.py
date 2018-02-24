@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
+user = ''
+pwd = ''
 driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 100)

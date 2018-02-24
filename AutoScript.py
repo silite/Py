@@ -5,13 +5,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
+user = ''
+pwd = ''
 driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 120)
 comp = ['0156','1267','2358','3469','0457','1458','2369','0378','1489','0259']
 def JudgeRe(list_):
+
     num_1 = list_[0].split(',') #中奖号码1
     num_2 = list_[1].split(',') #同
     temp = comp[int(num_2[3])]

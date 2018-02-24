@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = 'silite'
-pwd = 'silite'
+user = ''
+pwd = ''
 fireFoxOptions = webdriver.FirefoxOptions()
 fireFoxOptions.set_headless()
 driver = webdriver.Firefox(firefox_options=fireFoxOptions)
@@ -13,6 +13,7 @@ driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
 start_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 def LogIn():
+
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
     )

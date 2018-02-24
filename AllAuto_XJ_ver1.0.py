@@ -4,11 +4,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = 'silite'
-pwd = 'silite'
+user = ''
+pwd = ''
 fireFoxOptions = webdriver.FirefoxOptions()
 fireFoxOptions.set_headless()
 driver = webdriver.Firefox(firefox_options=fireFoxOptions)
+
 #driver = webdriver.Firefox()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
