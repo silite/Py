@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = ''
-pwd = ''
+user = '15648807923'
+pwd = '15648807923'
 fireFoxOptions = webdriver.FirefoxOptions()
 fireFoxOptions.set_headless()
 driver = webdriver.Firefox(firefox_options=fireFoxOptions)
@@ -35,7 +35,7 @@ def JudgeRe(list_,method):
     num_2 = list_[1].split(',')
     num_3 = list_[2].split(',')
     num_4 = list_[3].split(',')
-    #num_5 = list_[4].split(',')
+    num_5 = list_[4].split(',')
     if method == 'hou' :
         method_zh = '后三'
         method_en = 'Back'
@@ -43,7 +43,7 @@ def JudgeRe(list_,method):
         num_2 = num_2[2:]
         num_3 = num_3[2:]
         num_4 = num_4[2:]
-        #num_5 = num_5[2:]
+        num_5 = num_5[2:]
     elif method == 'zhong' :
         method_zh = '中三'
         method_en = 'Mid'
@@ -51,7 +51,7 @@ def JudgeRe(list_,method):
         num_2 = num_2[1:4]
         num_3 = num_3[1:4]
         num_4 = num_4[1:4]
-        #num_5 = num_5[1:4]
+        num_5 = num_5[1:4]
     elif method == 'qian' :
         method_zh = '前三'
         method_en = 'Front'
@@ -59,8 +59,8 @@ def JudgeRe(list_,method):
         num_2 = num_2[:3]
         num_3 = num_3[:3]
         num_4 = num_4[:3]
-        #num_5 = num_5[:3]
-    temp = list(set(num_1 + num_2 + num_3 + num_4))
+        num_5 = num_5[:3]
+    temp = list(set(num_1 + num_2 + num_3 + num_4 + num_5))
     rejudge = []
     for i in range(0,10):
         i = str(i)
@@ -254,8 +254,8 @@ def main():
                 else:
                     PrintLog('FrontNone\n')
                     print('重庆前三暂无符合')
-                time.sleep(20)
-                os.system('cls')
+            time.sleep(20)
+            os.system('cls')
         except Exception as e:
             #error = time.strftime("%H:%M:%S", time.localtime()) + '-' + 'ERROR:' + str(e) + '\n'
             #print(error)

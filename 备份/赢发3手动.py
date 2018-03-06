@@ -1,19 +1,20 @@
-import time,re,os,sys
 from selenium import webdriver
+import time,re,os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
-fireFoxOptions = webdriver.FirefoxOptions()
-fireFoxOptions.set_headless()
-driver = webdriver.Firefox(firefox_options=fireFoxOptions)
-
-#driver = webdriver.Firefox()
+user = 'zy0108'
+pwd = 'zy731027'
+driver = webdriver.Firefox()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
-start_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
+wait_short = WebDriverWait(driver, 1)
+comp = ['0358','1469','0257','1368','2479',
+'0134','5689','1245','6790','2356','7801','3467','8912','4578','9023',
+'0145','5690','1256','6701','2367','7812','3478','8923','4589','9034',
+'0147','1247','2457','2578','2358',
+'3568','3689','0369','0169','0149']
 def LogIn():
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
@@ -30,50 +31,41 @@ def LogIn():
     fin_driver = wait.until(
         EC.url_to_be('http://www.yfcp885.com/index')
     )
-def JudgeRe(list_,method):
-    num_1 = list_[0].split(',')
+def JudgeRe(list_,method): #method分前中后
+    num_1 = list_[0].split(',') #中奖号码
     num_2 = list_[1].split(',')
     num_3 = list_[2].split(',')
-    num_4 = list_[3].split(',')
-    num_5 = list_[4].split(',')
     if method == 'hou' :
         method_zh = '后三'
-        method_en = 'Back'
         num_1 = num_1[2:]
         num_2 = num_2[2:]
         num_3 = num_3[2:]
-        num_4 = num_4[2:]
-        num_5 = num_5[2:]
     elif method == 'zhong' :
         method_zh = '中三'
-        method_en = 'Mid'
         num_1 = num_1[1:4]
         num_2 = num_2[1:4]
         num_3 = num_3[1:4]
-        num_4 = num_4[1:4]
-        num_5 = num_5[1:4]
     elif method == 'qian' :
         method_zh = '前三'
-        method_en = 'Front'
         num_1 = num_1[:3]
         num_2 = num_2[:3]
         num_3 = num_3[:3]
-        num_4 = num_4[:3]
-        num_5 = num_5[:3]
-    temp = list(set(num_1 + num_2 + num_3 + num_4 + num_5))
-    rejudge = []
-    for i in range(0,10):
-        i = str(i)
-        if i not in temp:
-            rejudge.append(i)
-    if len(rejudge) >= 4:
-        i = rejudge[0] + rejudge[1] + rejudge[2] + rejudge[3] 
-        PrintLog('' + method_en + ':' + i + '\n')
-        print("符合给定: " + method_zh + ' ' + i + " 正在打印 ")
-        print("\a")
-        return i
-    else:
-        return ''
+    for i in range(len(comp)):
+        count = 0
+        rejudge = []
+        temp = []
+        temp = list(set(num_1 + num_2 + num_3))
+        for left_num in range(0,10):
+            left_num = str(left_num)
+            if left_num not in temp:
+                rejudge.append(left_num)
+        for j in comp[i]:
+            if j in ''.join(rejudge):
+                count += 1
+                if(count == 4):
+                    print("    符合给定: " + method_zh + ' ' + comp[i]+ " 正在打印 ")
+                    return comp[i]
+    return ''
 def OpStr(result):
     if len(result) == 0:
         return ''
@@ -98,6 +90,7 @@ def OpStr(result):
         temp.append(str_)
     return temp
 def submit():
+    #time.sleep(1)
     wait.until(
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div/div[3]'))
     )
@@ -128,9 +121,7 @@ def send_all_me(xpath,result):
     click('/html/body/div/div[2]/div[2]/div[1]/div[2]/div[3]/p/label[2]')
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/ul/li[3]')
     time.sleep(1)
-    try:
-        click('/html/body/div[2]/div[2]/div/div/div[2]/span')
-    except: pass
+    click('/html/body/div[2]/div[2]/div/div/div[2]/span')
     week_num = wait.until(
         EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[1]/tbody/tr[3]/td/input'))
     )
@@ -141,11 +132,6 @@ def send_all_me(xpath,result):
     )
     rate.send_keys(Keys.CONTROL + 'a')
     rate.send_keys('4')
-    #times = wait.until(
-    #    EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[1]/tbody/tr[4]/td/input'))
-    #)
-    #times.send_keys(Keys.CONTROL + 'a')
-    #times.send_keys('2')
     click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/a')
 def wait_to_be_num():
     wait.until(
@@ -154,12 +140,8 @@ def wait_to_be_num():
     wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="fn_getoPenGame"]/tbody[2]/tr[2]/td[2]/i')) #加载第二个
     )
-def PrintLog(content):
-    with open('D:\log\d_' + start_time + '.txt' ,'a') as f:
-        f.write(content)
 def PreAddNum(method):
     WinningNum = re.compile('class="numbers">(.*?)<').findall(driver.page_source)
-    PrintLog("X_ " + WinningNum[0] + " | " + WinningNum[1] + " | " + WinningNum[2] + " | " + WinningNum[3] + "   ")
     return OpStr(JudgeRe(WinningNum,method))
 def Buy():
     money_xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[2]/p/em[2]'
@@ -169,81 +151,65 @@ def Buy():
     money = driver.find_element_by_xpath(money_xpath).text
     if money == '674.24':
         click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/a')
-        click('/html/body/div[2]/div[2]/div/div/div[2]/span[2]')
-        sure_last = wait.until(
-            EC.element_to_be_clickable((By.XPATH ,'/html/body/div[2]/div[2]/div/div/div[2]/span'))    
+        i = input("    是否确认投注?\n")
+        if i == 'm':
+            click('/html/body/div[2]/div[2]/div/div/div[2]/span[2]')
+def FirstIn():
+    try:
+        sure_fir = wait_short.until(
+            EC.visibility_of_element_located((By.XPATH,'//*[@id="layermbox1"]/div[2]/div/div/div[2]/span'))
         )
-        sure_last.click()
-        time.sleep(1)
-def GetTime():
-    wait.until(
-        EC.presence_of_all_elements_located((By.XPATH ,'/html/body/div/div[2]/div[1]/div[2]/em'))    
-    )
-    time.sleep(1)
-    os.system('cls')
-    Time = driver.find_element_by_xpath('/html/body/div/div[2]/div[1]/div[2]/em').text
-    if len(Time) != 8:
-        sys.exit()
-    sys.stdout.write('当前时间' + Time + '\n')
-    sys.stdout.flush()
-    if Time == '00:00:01':
-        time.sleep(3)
-        driver.find_element_by_xpath('/html/body/div[2]/div[2]/div/div/div[2]/span').click()
-    return int(Time[-5] + Time[-4]) * 60 + int(Time[-2] + Time[-1])
-def waitTime(nowTime ,l ,h = 210):
-    while True:
-        if nowTime > l and nowTime < h:
-            return nowTime
-        else:
-            if nowTime == 210:
-                driver.refresh()
-            nowTime = GetTime()
-def main():
+        sure_fir.click()
+    except:
+        return 0
+try:
     LogIn()
+    driver.get('http://www.yfcp885.com/lottery/SSC/1000')
+    FirstIn()
     while True:
-        try:
-            url = 'http://www.yfcp885.com/lottery/SSC/1001'
-            driver.get(url)
-            nowTime = waitTime(GetTime() ,170)
-            if nowTime > 170:
-                wait_to_be_num()
-                result_hou = PreAddNum('hou')
-                if len(result_hou) == 2:
-                    housan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[6]'
-                    send_all_me(housan,result_hou)
-                    Buy()
-                else:
-                    PrintLog('BackNone\n')
-                    print('新疆后三暂无符合')
-            nowTime = waitTime(GetTime() ,130)
-            if nowTime > 130:
-                nowTime = GetTime()
-                wait_to_be_num()
-                result_zhong = PreAddNum('zhong')
-                if len(result_zhong) == 2:
-                    zhongsan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[5]'
-                    send_all_me(zhongsan,result_zhong)
-                    Buy()
-                else:
-                    PrintLog('MidNone\n')
-                    print('新疆中三暂无符合')
-            nowTime = waitTime(GetTime() ,90)
-            if nowTime > 90:
-                nowTime = GetTime()
-                wait_to_be_num()
-                result_qian = PreAddNum('qian')
-                if len(result_qian) == 2:
-                    qiansan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[4]'
-                    send_all_me(qiansan,result_qian)
-                    Buy()
-                else:
-                    PrintLog('FrontNone\n')
-                    print('新疆前三暂无符合')
-            time.sleep(60)
+        flag = input("    是否开始判断后三?  ")
+        if flag == "m" or flag == "M":
+            wait_to_be_num()
+            result_hou = PreAddNum('hou')
+            if len(result_hou) == 2:
+                housan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[6]'
+                send_all_me(housan,result_hou)
+                Buy()
+            else:
+                print("    后三此次无符合.\n")
+        flag = ''
+        flag = input("    是否开始判断中三?  ")
+        if flag == "m" or flag == "M":
+            driver.refresh()
+            FirstIn()
+            wait_to_be_num()
+            result_zhong = PreAddNum('zhong')
+            if len(result_zhong) == 2:
+                zhongsan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[5]'
+                send_all_me(zhongsan,result_zhong)
+                Buy()
+            else:
+                print("    中三此次无符合.\n")
+        flag = ''
+        flag = input("    是否开始判断前三?  ")
+        if flag == "m" or flag == "M":
+            driver.refresh()
+            FirstIn()
+            wait_to_be_num()
+            result_qian = PreAddNum('qian')
+            if len(result_qian) == 2:
+                qiansan = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[4]'
+                send_all_me(qiansan,result_qian)
+                Buy()
+            else:
+                print("    前三此次无符合.\n")
+        flag = ''
+        flag = input("    是否刷新重新执行?  ")
+        if flag == 'm':
+            driver.refresh()
             os.system('cls')
-        except Exception as e:
-            #error = time.strftime("%H:%M:%S", time.localtime()) + '-' + 'ERROR:' + str(e) + '\n'
-            #PrintLog(error)
-            pass
-if __name__ == '__main__':
-    main()
+            continue
+        else:
+            break
+except Exception as e:
+    print(e)

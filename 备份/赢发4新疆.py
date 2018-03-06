@@ -4,12 +4,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
+user = 'zy0108'
+pwd = 'zy731027'
 fireFoxOptions = webdriver.FirefoxOptions()
 fireFoxOptions.set_headless()
 driver = webdriver.Firefox(firefox_options=fireFoxOptions)
-
 #driver = webdriver.Firefox()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
@@ -43,7 +42,7 @@ def JudgeRe(list_,method):
         num_2 = num_2[2:]
         num_3 = num_3[2:]
         num_4 = num_4[2:]
-        num_5 = num_5[2:]
+        #num_5 = num_5[2:]
     elif method == 'zhong' :
         method_zh = '中三'
         method_en = 'Mid'
@@ -59,8 +58,11 @@ def JudgeRe(list_,method):
         num_2 = num_2[:3]
         num_3 = num_3[:3]
         num_4 = num_4[:3]
-        num_5 = num_5[:3]
-    temp = list(set(num_1 + num_2 + num_3 + num_4 + num_5))
+        #num_5 = num_5[:3]
+    if method == 'zhong':
+        temp = list(set(num_1 + num_2 + num_3 + num_4 + num_5))
+    else:
+        temp = list(set(num_1 + num_2 + num_3 + num_4))
     rejudge = []
     for i in range(0,10):
         i = str(i)
@@ -175,6 +177,12 @@ def Buy():
         )
         sure_last.click()
         time.sleep(1)
+def GetNewWeek():
+    Xpath = '/html/body/div/div[2]/div[2]/div[2]/div[1]/div[2]/table/tbody[2]/tr[1]/td[1]/i'
+    wait.until(
+        EC.presence_of_all_elements_located((By.XPATH, Xpath))
+    )
+    return driver.find_element_by_xpath(Xpath).text
 def GetTime():
     wait.until(
         EC.presence_of_all_elements_located((By.XPATH ,'/html/body/div/div[2]/div[1]/div[2]/em'))    
@@ -184,7 +192,7 @@ def GetTime():
     Time = driver.find_element_by_xpath('/html/body/div/div[2]/div[1]/div[2]/em').text
     if len(Time) != 8:
         sys.exit()
-    sys.stdout.write('当前时间' + Time + '\n')
+    sys.stdout.write('新疆时间' + Time + '\n')
     sys.stdout.flush()
     if Time == '00:00:01':
         time.sleep(3)
@@ -200,11 +208,20 @@ def waitTime(nowTime ,l ,h = 210):
             nowTime = GetTime()
 def main():
     LogIn()
+    nowWeek = '0'
     while True:
         try:
             url = 'http://www.yfcp885.com/lottery/SSC/1001'
             driver.get(url)
             nowTime = waitTime(GetTime() ,170)
+            TheNewWeek = GetNewWeek()
+            print(TheNewWeek)
+            if nowWeek == '0':
+                nowWeek = TheNewWeek
+            elif nowWeek == TheNewWeek:
+                sys.exit()
+            else:
+                nowWeek = TheNewWeek
             if nowTime > 170:
                 wait_to_be_num()
                 result_hou = PreAddNum('hou')
@@ -242,8 +259,8 @@ def main():
             time.sleep(60)
             os.system('cls')
         except Exception as e:
-            #error = time.strftime("%H:%M:%S", time.localtime()) + '-' + 'ERROR:' + str(e) + '\n'
-            #PrintLog(error)
-            pass
+            error = time.strftime("%H:%M:%S", time.localtime()) + '-' + 'ERROR:' + str(e) + '\n'
+            PrintLog(error)
+            sys.exit()
 if __name__ == '__main__':
     main()
