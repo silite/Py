@@ -4,3 +4,5 @@ TCPro/.idea/misc.xml
 TCPro/.idea/modules.xml
 TCPro/.idea/workspace.xml
 TCPro/TCPro.iml
+*.xml
+TCPro/__pycache__/Text.cpython-36.pyc
