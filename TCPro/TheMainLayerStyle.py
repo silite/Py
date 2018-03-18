@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(2688, 1740)
+        Form.resize(2688, 1738)
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(2580, 8, 101, 61))
         self.pushButton.setText("")
@@ -99,9 +99,16 @@ class Ui_Form(object):
         self.pushButton_7.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_7.setAutoDefault(False)
         self.pushButton_7.setObjectName("pushButton_7")
+        self.pushButton_8 = QtWidgets.QPushButton(Form)
+        self.pushButton_8.setGeometry(QtCore.QRect(7, 199, 262, 81))
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.pushButton_9 = QtWidgets.QPushButton(Form)
+        self.pushButton_9.setGeometry(QtCore.QRect(267, 199, 263, 81))
+        self.pushButton_9.setObjectName("pushButton_9")
 
         self.retranslateUi(Form)
         self.pushButton.clicked.connect(Form.close)
+        self.pushButton_3.clicked.connect(Form.showMinimized)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -112,9 +119,11 @@ class Ui_Form(object):
         self.comboBox_3.setItemText(0, _translate("Form", "View"))
         self.comboBox_4.setItemText(0, _translate("Form", "Repose"))
         self.comboBox_5.setItemText(0, _translate("Form", "Branch"))
-        self.comboBox_6.setItemText(0, _translate("Form", "        File"))
-        self.comboBox_7.setItemText(0, _translate("Form", "        File"))
-        self.comboBox_8.setItemText(0, _translate("Form", "        File"))
+        self.comboBox_6.setItemText(0, _translate("Form", "        Fetch orign"))
+        self.comboBox_7.setItemText(0, _translate("Form", "        Master"))
+        self.comboBox_8.setItemText(0, _translate("Form", "        ThePro"))
+        self.pushButton_8.setText(_translate("Form", "Changes"))
+        self.pushButton_9.setText(_translate("Form", "History"))
         file = QtCore.QFile('css.css')
         file.open(QtCore.QFile.ReadOnly)
         styleSheet = file.readAll()

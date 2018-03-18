@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>2688</width>
-    <height>1740</height>
+    <height>1738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -229,7 +229,7 @@
    </property>
    <item>
     <property name="text">
-     <string>        File</string>
+     <string>        Fetch orign</string>
     </property>
    </item>
   </widget>
@@ -244,7 +244,7 @@
    </property>
    <item>
     <property name="text">
-     <string>        File</string>
+     <string>        Master</string>
     </property>
    </item>
   </widget>
@@ -259,7 +259,7 @@
    </property>
    <item>
     <property name="text">
-     <string>        File</string>
+     <string>        ThePro</string>
     </property>
    </item>
   </widget>
@@ -329,6 +329,32 @@
     <bool>false</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>199</y>
+     <width>262</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Changes</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>267</x>
+     <y>199</y>
+     <width>263</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>History</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>
@@ -345,6 +371,22 @@
     <hint type="destinationlabel">
      <x>2515</x>
      <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>2441</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2541</x>
+     <y>273</y>
     </hint>
    </hints>
   </connection>

@@ -1,5 +1,4 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtQml import QQmlApplicationEngine
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
@@ -60,9 +59,6 @@ class Main_Window(QtWidgets.QWidget, Ui_Form):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    engine = QQmlApplicationEngine()
-    engine.load("Style.qml")
-    engine.quit.connect(app.quit)
     windows = Main_Window()
     windows.show()
     sys.exit(app.exec_())
