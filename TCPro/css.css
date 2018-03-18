@@ -95,7 +95,11 @@ QPushButton#pushButton_9:pressed {
     border: 0px;
     border-left: 4px solid #000000;
 }
-
+#columnView_3{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    border-left: 4px solid #000000;
+}
 #comboBox{
     background-color: rgb(36, 41, 46);
     border: 0px;

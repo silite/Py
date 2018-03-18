@@ -368,6 +368,16 @@
     <string>CheckBox</string>
    </property>
   </widget>
+  <widget class="QColumnView" name="columnView_3">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>200</y>
+     <width>2151</width>
+     <height>1531</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>

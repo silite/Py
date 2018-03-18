@@ -108,6 +108,9 @@ class Ui_Form(object):
         self.checkBox = QtWidgets.QCheckBox(Form)
         self.checkBox.setGeometry(QtCore.QRect(11, 280, 515, 81))
         self.checkBox.setObjectName("checkBox")
+        self.columnView_3 = QtWidgets.QColumnView(Form)
+        self.columnView_3.setGeometry(QtCore.QRect(530, 200, 2151, 1531))
+        self.columnView_3.setObjectName("columnView_3")
 
         self.retranslateUi(Form)
         self.pushButton.clicked.connect(Form.close)
@@ -133,3 +136,4 @@ class Ui_Form(object):
         styleSheet = file.readAll()
         styleSheet = str(styleSheet, encoding='utf8')
         self.setStyleSheet(styleSheet)
+
