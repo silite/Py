@@ -31,7 +31,9 @@ class Ui_Form(object):
         self.pushButton_3.setAutoDefault(False)
         self.pushButton_3.setObjectName("pushButton_3")
         self.line = QtWidgets.QFrame(Form)
-        self.line.setGeometry(QtCore.QRect(-10, 50, 2688, 40))
+        self.line.setEnabled(True)
+        self.line.setGeometry(QtCore.QRect(5, 65, 2676, 10))
+        self.line.setSizeIncrement(QtCore.QSize(20, 20))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
@@ -48,4 +50,3 @@ class Ui_Form(object):
         styleSheet = file.readAll()
         styleSheet = str(styleSheet, encoding='utf8')
         self.setStyleSheet(styleSheet)
-

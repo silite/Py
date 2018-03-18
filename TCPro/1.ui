@@ -80,13 +80,22 @@
    </property>
   </widget>
   <widget class="Line" name="line">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>-10</x>
-     <y>50</y>
-     <width>2688</width>
-     <height>40</height>
+     <x>5</x>
+     <y>65</y>
+     <width>2676</width>
+     <height>10</height>
     </rect>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>

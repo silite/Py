@@ -38,3 +38,4 @@ QPushButton#pushButton_3:hover {
 QPushButton#pushButton_3:pressed {
     background-image: url(./img/shadow/turn_small.png);
 }
+#line{border-top: 4px solid #000000;}
