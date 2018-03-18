@@ -37,6 +37,9 @@ class Ui_Form(object):
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
+        self.columnView = QtWidgets.QColumnView(Form)
+        self.columnView.setGeometry(QtCore.QRect(893, 8, 1491, 57))
+        self.columnView.setObjectName("columnView")
 
         self.retranslateUi(Form)
         self.pushButton.clicked.connect(Form.close)
@@ -50,3 +53,4 @@ class Ui_Form(object):
         styleSheet = file.readAll()
         styleSheet = str(styleSheet, encoding='utf8')
         self.setStyleSheet(styleSheet)
+

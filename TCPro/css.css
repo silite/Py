@@ -38,4 +38,10 @@ QPushButton#pushButton_3:hover {
 QPushButton#pushButton_3:pressed {
     background-image: url(./img/shadow/turn_small.png);
 }
+
 #line{border-top: 4px solid #000000;}
+#columnView{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    border-right: 1px solid #000000;
+}

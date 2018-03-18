@@ -101,6 +101,16 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
+  <widget class="QColumnView" name="columnView">
+   <property name="geometry">
+    <rect>
+     <x>893</x>
+     <y>8</y>
+     <width>1491</width>
+     <height>57</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>
