@@ -7,6 +7,7 @@ from TheMainLayerStyle import Ui_Form
 class Main_Window(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
         super(Main_Window, self).__init__(None, Qt.FramelessWindowHint) # 设置为顶级窗口，无边框
+        self.setWindowIcon(QIcon("./img/shadow/icon.png"))
         self.setupUi(self)
         self.initUI()
 

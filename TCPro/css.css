@@ -39,6 +39,10 @@ QPushButton#pushButton_3:pressed {
     background-image: url(./img/shadow/turn_small.png);
 }
 
+QPushButton#pushButton_4 {
+    background-image: url(./img/shadow/icon.png);
+    background-color: rgb(36, 41, 46);
+}
 #line{border-top: 4px solid #000000;}
 #columnView{
     background-color: rgb(36, 41, 46);

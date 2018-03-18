@@ -40,6 +40,12 @@ class Ui_Form(object):
         self.columnView = QtWidgets.QColumnView(Form)
         self.columnView.setGeometry(QtCore.QRect(893, 8, 1491, 57))
         self.columnView.setObjectName("columnView")
+        self.pushButton_4 = QtWidgets.QPushButton(Form)
+        self.pushButton_4.setGeometry(QtCore.QRect(7, 7, 81, 61))
+        self.pushButton_4.setText("")
+        self.pushButton_4.setIconSize(QtCore.QSize(40, 40))
+        self.pushButton_4.setAutoDefault(False)
+        self.pushButton_4.setObjectName("pushButton_4")
 
         self.retranslateUi(Form)
         self.pushButton.clicked.connect(Form.close)
