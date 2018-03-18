@@ -58,6 +58,7 @@ QPushButton#pushButton_7 {
 QPushButton#pushButton_8 {
     background-color: rgb(255, 255, 255);
     border: 0px;
+    border-bottom: 4px solid #DDDDDD;
     font: 75 8pt "Arial";
 }
 QPushButton#pushButton_8:hover {
@@ -70,6 +71,7 @@ QPushButton#pushButton_8:pressed {
 QPushButton#pushButton_9 {
     background-color: rgb(255, 255, 255);
     border: 0px;
+    border-bottom: 4px solid #DDDDDD;
     border-left: 4px solid #DDDDDD;
     font: 75 8pt "Arial";
 }

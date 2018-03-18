@@ -333,7 +333,7 @@
    <property name="geometry">
     <rect>
      <x>7</x>
-     <y>199</y>
+     <y>200</y>
      <width>262</width>
      <height>81</height>
     </rect>
@@ -346,13 +346,26 @@
    <property name="geometry">
     <rect>
      <x>267</x>
-     <y>199</y>
+     <y>200</y>
      <width>263</width>
      <height>81</height>
     </rect>
    </property>
    <property name="text">
     <string>History</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>280</y>
+     <width>515</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CheckBox</string>
    </property>
   </widget>
  </widget>
