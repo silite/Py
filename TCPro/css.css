@@ -121,3 +121,32 @@ QPushButton#pushButton_4 {
     border:none;
     background:transparent;
 }
+#comboBox_6{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox_6::down-arrow {
+    image: url(./img/shadow/down.png);
+    border: none;
+}
+#comboBox_6::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 30px;
+    height: 30px;
+    background: none;
+}
+#comboBox_7{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox_8{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
