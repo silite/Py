@@ -97,4 +97,8 @@ class Ui_Form(object):
         self.comboBox_6.setItemText(0, _translate("Form", "File"))
         self.comboBox_7.setItemText(0, _translate("Form", "File"))
         self.comboBox_8.setItemText(0, _translate("Form", "File"))
-
+        file = QtCore.QFile('css.css')
+        file.open(QtCore.QFile.ReadOnly)
+        styleSheet = file.readAll()
+        styleSheet = str(styleSheet, encoding='utf8')
+        self.setStyleSheet(styleSheet)
