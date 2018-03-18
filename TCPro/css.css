@@ -82,6 +82,16 @@ QPushButton#pushButton_9:hover {
 QPushButton#pushButton_9:pressed {
     background-image: url(./img/shadow/turn_small.png);
 }
+QPushButton#pushButton_10 {
+    background-image: url(./img/shadow/block.png);
+    background-color: rgb(240, 240, 240);
+    border: 2px solid #FFCC99;
+    border-radius: 8px
+}
+QPushButton#pushButton_11 {
+    background-color: rgb(99, 160, 228);
+    border-radius: 8px
+}
 #line{border-top: 4px solid #000000;}
 
 #columnView{
@@ -96,9 +106,18 @@ QPushButton#pushButton_9:pressed {
     border-left: 4px solid #000000;
 }
 #columnView_3{
-    background-color: rgb(36, 41, 46);
+    background-image: url(./img/shadow/bgi.png);
+    background-color: rgb(246, 248, 250);
     border: 0px;
-    border-left: 4px solid #000000;
+    border-left: 4px solid #C0C0C0;
+}
+#columnView_4{
+    background-color: rgb(246, 248, 250);
+    border: 0px;
+}
+#columnView_5{
+    background-image: url(./img/shadow/talk.png);
+    border: 0px;
 }
 #comboBox{
     background-color: rgb(36, 41, 46);
@@ -239,4 +258,13 @@ QPushButton#pushButton_9:pressed {
     border: none;
     width: 80px;
     height: 30px;
+}
+#label{
+    font: 75 10pt "微软雅黑";
+    subcontrol-origin: content;
+}
+#textEdit{
+    border: 3px solid #C0C0C0;
+    border-radius: 8px;
+    font: 75 10pt "微软雅黑";
 }
