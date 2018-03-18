@@ -1,0 +1,5 @@
+file = QtCore.QFile('css.css')
+file.open(QtCore.QFile.ReadOnly)
+styleSheet = file.readAll()
+styleSheet = str(styleSheet, encoding='utf8')
+self.setStyleSheet(styleSheet)

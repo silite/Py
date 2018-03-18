@@ -1,0 +1,40 @@
+QPushButton#pushButton {
+    background-image: url(./img/shadow/close.png);
+    background-color: rgb(36, 41, 46);
+    /*border-top-left-radius:2px;*/
+    /*border-top-right-radius:2px;*/
+    /*background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 rgb(36 ,41 ,46));*/
+    /*border:1px;*/
+    /*border-radius:5px;padding:2px 4px;!*border-radius控制圆角大小*!*/
+}
+QPushButton#pushButton:hover {
+    background-image: url(./img/shadow/close_hover.png);
+    background-color: rgb(232, 17, 35);
+}
+QPushButton#pushButton:pressed {
+    background-image: url(./img/shadow/close.png);
+}
+
+QPushButton#pushButton_2 {
+    background-image: url(./img/shadow/turn_big.png);
+    background-color: rgb(36, 41, 46);
+}
+QPushButton#pushButton_2:hover {
+    background-image: url(./img/shadow/turn_big_hover.png);
+    background-color: rgb(136, 136, 136);
+}
+QPushButton#pushButton_2:pressed {
+    background-image: url(./img/shadow/turn_big.png);
+}
+
+QPushButton#pushButton_3 {
+    background-image: url(./img/shadow/turn_small.png);
+    background-color: rgb(36, 41, 46);
+}
+QPushButton#pushButton_3:hover {
+    background-image: url(./img/shadow/turn_small_hover.png);
+    background-color: rgb(136, 136, 136);
+}
+QPushButton#pushButton_3:pressed {
+    background-image: url(./img/shadow/turn_small.png);
+}
