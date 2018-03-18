@@ -43,6 +43,18 @@ QPushButton#pushButton_4 {
     background-image: url(./img/shadow/icon.png);
     background-color: rgb(36, 41, 46);
 }
+QPushButton#pushButton_5 {
+    background-image: url(./img/shadow/book.png);
+    background-color: rgb(36, 41, 46);
+}
+QPushButton#pushButton_6 {
+    background-image: url(./img/shadow/icon.png);
+    background-color: rgb(36, 41, 46);
+}
+QPushButton#pushButton_7 {
+    background-image: url(./img/shadow/icon.png);
+    background-color: rgb(36, 41, 46);
+}
 #line{border-top: 4px solid #000000;}
 
 #columnView{
@@ -54,6 +66,7 @@ QPushButton#pushButton_4 {
 #columnView_2{
     background-color: rgb(36, 41, 46);
     border: 0px;
+    border-left: 4px solid #000000;
 }
 
 #comboBox{
@@ -124,29 +137,51 @@ QPushButton#pushButton_4 {
 #comboBox_6{
     background-color: rgb(36, 41, 46);
     border: 0px;
+    border-left: 4px solid #000000;
     color:rgb(149, 157, 165);
     font: 75 10pt "微软雅黑";
 }
 #comboBox_6::down-arrow {
     image: url(./img/shadow/down.png);
-    border: none;
 }
 #comboBox_6::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: center right;
-    width: 30px;
+    border: none;
+    width: 80px;
     height: 30px;
-    background: none;
 }
 #comboBox_7{
     background-color: rgb(36, 41, 46);
     border: 0px;
+    border-left: 4px solid #000000;
     color:rgb(149, 157, 165);
     font: 75 10pt "微软雅黑";
+}
+#comboBox_7::down-arrow {
+    image: url(./img/shadow/down.png);
+}
+#comboBox_7::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    border: none;
+    width: 80px;
+    height: 30px;
 }
 #comboBox_8{
     background-color: rgb(36, 41, 46);
     border: 0px;
+
     color:rgb(149, 157, 165);
     font: 75 10pt "微软雅黑";
+}
+#comboBox_8::down-arrow {
+    image: url(./img/shadow/down.png);
+}
+#comboBox_8::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    border: none;
+    width: 80px;
+    height: 30px;
 }
