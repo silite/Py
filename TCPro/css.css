@@ -44,8 +44,80 @@ QPushButton#pushButton_4 {
     background-color: rgb(36, 41, 46);
 }
 #line{border-top: 4px solid #000000;}
+
 #columnView{
     background-color: rgb(36, 41, 46);
     border: 0px;
     border-right: 1px solid #000000;
+}
+
+#columnView_2{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+}
+
+#comboBox{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox::down-arrow {
+    image: none;
+}
+#comboBox::drop-down {
+    border:none;
+    background:transparent;
+}
+#comboBox_2{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox_2::down-arrow {
+    image: none;
+}
+#comboBox_2::drop-down {
+    border:none;
+    background:transparent;
+}
+#comboBox_3{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox_3::down-arrow {
+    image: none;
+}
+#comboBox_3::drop-down {
+    border:none;
+    background:transparent;
+}
+#comboBox_4{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox_4::down-arrow {
+    image: none;
+}
+#comboBox_4::drop-down {
+    border:none;
+    background:transparent;
+}
+#comboBox_5{
+    background-color: rgb(36, 41, 46);
+    border: 0px;
+    color:rgb(149, 157, 165);
+    font: 75 10pt "微软雅黑";
+}
+#comboBox_5::down-arrow {
+    image: none;
+}
+#comboBox_5::drop-down {
+    border:none;
+    background:transparent;
 }

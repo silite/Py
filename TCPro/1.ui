@@ -104,9 +104,9 @@
   <widget class="QColumnView" name="columnView">
    <property name="geometry">
     <rect>
-     <x>893</x>
+     <x>672</x>
      <y>8</y>
-     <width>1491</width>
+     <width>1712</width>
      <height>57</height>
     </rect>
    </property>
@@ -115,9 +115,9 @@
    <property name="geometry">
     <rect>
      <x>7</x>
-     <y>7</y>
+     <y>8</y>
      <width>81</width>
-     <height>61</height>
+     <height>60</height>
     </rect>
    </property>
    <property name="text">
@@ -131,6 +131,91 @@
    </property>
    <property name="autoDefault">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>8</y>
+     <width>101</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>File</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>188</x>
+     <y>8</y>
+     <width>101</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Edit</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_3">
+   <property name="geometry">
+    <rect>
+     <x>289</x>
+     <y>8</y>
+     <width>101</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>View</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_4">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>8</y>
+     <width>141</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Repose</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_5">
+   <property name="geometry">
+    <rect>
+     <x>531</x>
+     <y>8</y>
+     <width>141</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Branch</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QColumnView" name="columnView_2">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>69</y>
+     <width>1111</width>
+     <height>131</height>
+    </rect>
    </property>
   </widget>
  </widget>
