@@ -1,17 +1,24 @@
-import time,re,os,sys
 from selenium import webdriver
+import re
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = '15648807923'
-pwd = '15648807923'
+user = 'silite'
+pwd = 'silite'
 # fireFoxOptions = webdriver.FirefoxOptions()
 # fireFoxOptions.set_headless()
 # driver = webdriver.Firefox(firefox_options=fireFoxOptions)
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
+TheAddList_1 = [5, 7, 9, 11, 13, 15, 17]
+TheAddList_2 = [6, 8, 10, 12, 14, 16, 18]
+TheAddList_3 = [5, 8, 9, 12, 13, 16, 17]
+TheAddList_4 = [6, 7, 10, 11, 14, 15, 18]
+TheAddList_5 = [2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20]
+TheAddList_6 = [9, 10, 11, 12, 13, 14]
+
 def LogIn():
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
@@ -28,115 +35,46 @@ def LogIn():
     fin_driver = wait.until(
         EC.url_to_be('http://www.yfcp885.com/index')
     )
-def wait_to_be_num():
+def GetWinningNum(x):
+    if x == 1:
+        url = 'http://www.yfcp885.com/trendChart/1000'
+    else:
+        url = 'http://www.yfcp885.com/trendChart/1001'
+    driver.get(url)
+    click_200 = wait.until(
+        EC.element_to_be_clickable((By.XPATH,'//*[@id="periods-data"]/a[3]'))
+    )
+    click_200.click()
     wait.until(
-        EC.presence_of_element_located((By.XPATH,'//*[@id="fn_getoPenGame"]/tbody[2]/tr[1]/td[2]/i')) #加载第一个
+        EC.presence_of_element_located((By.XPATH,'//*[@id="J-chart-content"]/tr[30]/td[5]/span'))
     )
-    wait.until(
-        EC.presence_of_element_located((By.XPATH,'//*[@id="fn_getoPenGame"]/tbody[2]/tr[2]/td[2]/i')) #加载第二个
-    )
-def GetWantBuyNumList():
-    WinningNum = re.compile('class="numbers">(.*?)<').findall(driver.page_source)
-    temp = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-    ExistNum = []
-    for i in range(8):
-        for j in range(0, 9 ,2):
-            if WinningNum[i][j] not in ExistNum:
-                ExistNum.append(WinningNum[i][j])
-    return set(temp).difference(set(ExistNum))
-def click(x):
-    time.sleep(0.3)
-    driver.find_element_by_xpath(x).click()
-def Operation(WantBuyNum):
-    print("正在打印" + str(WantBuyNum))
-    method = wait.until(
-        EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[1]'))
-    )
-    method.click()
-    for i in range(1,6):
-        position_xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div/ul/li/div[' + str(i) + ']/div[1]/a[' +WantBuyNum+ ']'
-        click(position_xpath)
-    click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/a')
-    click('/html/body/div/div[2]/div[2]/div[1]/div[2]/div[3]/p/label[2]')
-    click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/ul/li[3]')
-    time.sleep(1)
-    try:
-        click('/html/body/div[2]/div[2]/div/div/div[2]/span')
-    except: pass
-    week_num = wait.until(
-        EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[1]/tbody/tr[3]/td/input'))
-    )
-    week_num.send_keys(Keys.CONTROL + 'a')
-    week_num.send_keys('5')
-    rate = wait.until(
-        EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[2]/tbody/tr[2]/td/input[2]'))
-    )
-    rate.send_keys(Keys.CONTROL + 'a')
-    rate.send_keys('12')
-    #times = wait.until(
-    #    EC.element_to_be_clickable((By.XPATH,'//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/div[3]/table[1]/tbody/tr[4]/td/input'))
-    #)
-    #times.send_keys(Keys.CONTROL + 'a')
-    #times.send_keys('2')
-    click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/div[1]/a')
-def Buy():
-    money_xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[2]/p/em[2]'
-    wait.until(
-        EC.presence_of_all_elements_located((By.XPATH ,money_xpath))
-    )
-    money = driver.find_element_by_xpath(money_xpath).text
-    if money == '450.00':
-        click('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/div[4]/div/a')
-        click('/html/body/div[2]/div[2]/div/div/div[2]/span[2]')
-        sure_last = wait.until(
-            EC.element_to_be_clickable((By.XPATH ,'/html/body/div[2]/div[2]/div/div/div[2]/span'))
-        )
-        sure_last.click()
-        time.sleep(1)
-def GetTime():
-    wait.until(
-        EC.presence_of_all_elements_located((By.XPATH ,'/html/body/div/div[2]/div[1]/div[2]/em'))
-    )
-    time.sleep(1)
-    os.system('cls')
-    Time = driver.find_element_by_xpath('/html/body/div/div[2]/div[1]/div[2]/em').text
-    if len(Time) != 8:
-        sys.exit()
-    sys.stdout.write('当前时间' + Time + '\n')
-    sys.stdout.flush()
-    if Time == '00:00:01':
-        time.sleep(4)
-        driver.find_element_by_xpath('/html/body/div[2]/div[2]/div/div/div[2]/span').click()
-    return int(Time[-5] + Time[-4]) * 60 + int(Time[-2] + Time[-1])
-def waitTime(nowTime ,l ,h = 200):
-    while True:
-        if nowTime > l and nowTime < h:
-            return nowTime
-        else:
-            if nowTime == 200:
-                driver.refresh()
-            nowTime = GetTime()
+    WinningNum = re.compile('class="lottery-numbers">(.*?)</span>').findall(driver.page_source)
+    return WinningNum[:-4]
+def AddNum(x):
+    TheAdd = 0
+    for i in range(0, 5, 2):
+#   for i in range(2, 7, 2):
+#   for i in range(4, 9, 2):
+        TheAdd += int(x[i])
+    return TheAdd
+def judge(WinningNum):
+    TheMax = 0
+    for i in range(190):
+        print(".", end='')
+        Week = 0
+        while True:
+            if AddNum(WinningNum[i + Week]) in TheAddList_1:
+                if Week > TheMax:
+                    TheMax = Week
+                break
+            else:
+                Week += 1
+    return TheMax
 def main():
     LogIn()
     while True:
-        try:
-            url = 'http://www.yfcp885.com/lottery/SSC/1000'
-            driver.get(url)
-            nowTime = waitTime(GetTime() ,140)
-            if nowTime > 140:
-                wait_to_be_num()
-                WantBuyNum= GetWantBuyNumList()
-                if len(WantBuyNum) == 0:
-                    print("暂无符合")
-                else:
-                    print("剩余数字: ", end='')
-                    print(WantBuyNum)
-                for WantBuyNum in WantBuyNum:
-                    Operation(WantBuyNum)
-                    Buy()
-            time.sleep(100)
-        except Exception as e:
-            time.sleep(100)
-            pass
+        x = input('请输入种类 1.重庆 2.新疆\n')
+        WinningNum = GetWinningNum(int(x))
+        print(judge(WinningNum))
 if __name__ == '__main__':
     main()
