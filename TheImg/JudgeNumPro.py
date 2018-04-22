@@ -12,13 +12,26 @@ pwd = 'silite'
 driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
-TheAddList_1 = [5, 7, 9, 11, 13, 15, 17]
-TheAddList_2 = [6, 8, 10, 12, 14, 16, 18]
-TheAddList_3 = [5, 8, 9, 12, 13, 16, 17]
-TheAddList_4 = [6, 7, 10, 11, 14, 15, 18]
-TheAddList_5 = [2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20]
-TheAddList_6 = [9, 10, 11, 12, 13, 14]
-
+list_0_1 = [8, 9, 0, 1, 2]
+list_0_2 = [3, 4, 5, 6, 7]
+list_1_1 = [9, 0, 1, 2, 3]
+list_1_2 = [4, 5, 6, 7, 8]
+list_2_1 = [0, 1, 2, 3, 4]
+list_2_2 = [5, 6, 7, 8, 9]
+list_3_1 = [1, 2, 3, 4, 5]
+list_3_2 = [6, 7, 8, 9, 0]
+list_4_1 = [2, 3, 4, 5, 6]
+list_4_2 = [7, 8, 9, 0, 1]
+list_5_1 = [3, 4, 5, 6, 7]
+list_5_2 = [8, 9, 0, 1, 2]
+list_6_1 = [4, 5, 6, 7, 8]
+list_6_2 = [9, 0, 1, 2, 3]
+list_7_1 = [5, 6, 7, 8, 9]
+list_7_2 = [0, 1, 2, 3, 4]
+list_8_1 = [6, 7, 8, 9, 0]
+list_8_2 = [1, 2, 3, 4, 5]
+list_9_1 = [7, 8, 9, 0, 1]
+list_9_2 = [2, 3, 4, 5, 6]
 def LogIn():
     element_user = wait.until(
         EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[2]/ul/li[1]/input'))
@@ -50,31 +63,83 @@ def GetWinningNum(x):
     )
     WinningNum = re.compile('class="lottery-numbers">(.*?)</span>').findall(driver.page_source)
     return WinningNum[:-4]
-def AddNum(x):
-    TheAdd = 0
-    for i in range(0, 5, 2):
-#   for i in range(2, 7, 2):
-#   for i in range(4, 9, 2):
-        TheAdd += int(x[i])
-    return TheAdd
-def judge(WinningNum):
-    TheMax = 0
-    for i in range(190):
-        print(".", end='')
-        Week = 0
+def judgeWin(WinningNumList, order, WantBuy, position):
+    EitherWin = False
+    for i in range(1, 12):
+        if int(WinningNumList[order + i][position]) in WantBuy:
+            EitherWin = True
+    if not EitherWin:
+        print("----未中在", end = '')
+        max = 12
         while True:
-            if AddNum(WinningNum[i + Week]) in TheAddList_1:
-                if Week > TheMax:
-                    TheMax = Week
+            if int(WinningNumList[order + max][position]) in WantBuy:
+                print(max, end = '')
+                print("期----")
                 break
-            else:
-                Week += 1
-    return TheMax
+            max += 1
+    return EitherWin
+def judge():
+    for i in range(1, 3):
+        if i == 1:
+            type_ = '重庆'
+        else:
+            type_ = '新疆'
+        WinningNumList = GetWinningNum(i)
+        for j in range(0, 9, 2):
+            win_1 = 0
+            win_2 = 0
+            count = 0
+            if j == 0:
+                position = '万'
+            elif j == 2:
+                position = '千'
+            elif j == 4:
+                position = '百'
+            elif j == 6:
+                position = '十'
+            elif j == 8:
+                position = '个'
+            for k in range(180):
+                count += 1
+                num = WinningNumList[k][j]
+                if num == '0':
+                    WantBuy_1 = list_0_1
+                    WangBuy_2 = list_0_2
+                elif num == '1':
+                    WantBuy_1 = list_1_1
+                    WangBuy_2 = list_1_2
+                elif num == '2':
+                    WantBuy_1 = list_2_1
+                    WangBuy_2 = list_2_2
+                elif num == '3':
+                    WantBuy_1 = list_3_1
+                    WangBuy_2 = list_3_2
+                elif num == '4':
+                    WantBuy_1 = list_4_1
+                    WangBuy_2 = list_4_2
+                elif num == '5':
+                    WantBuy_1 = list_5_1
+                    WangBuy_2 = list_5_2
+                elif num == '6':
+                    WantBuy_1 = list_6_1
+                    WangBuy_2 = list_6_2
+                elif num == '7':
+                    WantBuy_1 = list_7_1
+                    WangBuy_2 = list_7_2
+                elif num == '8':
+                    WantBuy_1 = list_8_1
+                    WangBuy_2 = list_8_2
+                elif num == '9':
+                    WantBuy_1 = list_9_1
+                    WangBuy_2 = list_9_2
+                if judgeWin(WinningNumList, k, WantBuy_1, j):
+                    win_1 += 1
+                if judgeWin(WinningNumList, k, WangBuy_2, j):
+                    win_2 += 1
+            print(type_ + position + '位第一组共' + str(count) + ' 中' + str(win_1))
+            print(type_ + position + '位第二组共' + str(count) + ' 中' + str(win_2))
 def main():
     LogIn()
-    while True:
-        x = input('请输入种类 1.重庆 2.新疆\n')
-        WinningNum = GetWinningNum(int(x))
-        print(judge(WinningNum))
+    judge()
 if __name__ == '__main__':
     main()
