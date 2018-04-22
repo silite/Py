@@ -71,7 +71,7 @@ def GetWantBuyAndOperation():
             position = '十'
         elif i == 8:
             position = '个'
-        num = WinningNumList[0][position]
+        num = WinningNumList[0][i]
         if num == '0':
             WantBuy_1 = list_0_1
             WangBuy_2 = list_0_2
@@ -102,7 +102,7 @@ def GetWantBuyAndOperation():
         elif num == '9':
             WantBuy_1 = list_9_1
             WangBuy_2 = list_9_2
-        if num == WinningNumList[1][position]:
+        if num == WinningNumList[1][i]:
             print("重庆" + position + "位 " + num + " 符合一组" + str(WantBuy_1))
             Operation(WantBuy_1, i)
         else:
@@ -170,12 +170,12 @@ def GetTime():
         time.sleep(3)
         driver.find_element_by_xpath('/html/body/div[2]/div[2]/div/div/div[2]/span').click()
     return int(Time[-5] + Time[-4]) * 60 + int(Time[-2] + Time[-1])
-def waitTime(nowTime ,l ,h = 120):
+def waitTime(nowTime ,l ,h = 9120):
     while True:
         if nowTime > l and nowTime < h:
             return nowTime
         else:
-            if nowTime == 120:
+            if nowTime == 9120:
                 driver.refresh()
             nowTime = GetTime()
 def main():
