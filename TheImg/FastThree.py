@@ -42,49 +42,52 @@ def GetText(xpath):
     return driver.find_element_by_xpath(xpath).text
 def main():
     LogIn()
-    driver.get('http://www.yfcp885.com/lottery/K3/1401')
-    table = PrettyTable()
-    EitherDf = True
-    Unlike_1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, " "]
-    Unlike_2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, " "]
-    Unlike_3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, " "]
-    for i in range(1, 12):
-        if i == 6:
-            EitherDf = False
-            for j in range(5):
-                FastClick('//*[@id="app"]/div[2]/div[2]/div[1]/div[1]/a[2]')
-            continue
-        xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[1]/div/ul/li[ ' + str(i) + ' ]'
-        click(xpath)
-        result = []
-        for j in range(1, 11):
-            xpath_1 = '//*[@id="fn_getoPenGame"]/tbody[2]/tr[' + str(j) + ']/td[4]/em[1]'
-            xpath_2 = '//*[@id="fn_getoPenGame"]/tbody[2]/tr[' + str(j) + ']/td[4]/em[2]'
-            temp = GetText(xpath_1) + " " + GetText(xpath_2)
-            result.append(temp)
-        if i < 10:
-            for k in range(9):
-                if result[k][0] != result[k + 1][0]:
-                    Unlike_1[k] += 1
-                if result[k][2] != result[k + 1][2]:
-                    Unlike_1[k] += 1
-        else:
-            for k in range(9):
-                if result[k][0] != result[k + 1][0]:
-                    Unlike_2[k] += 1
-                if result[k][2] != result[k + 1][2]:
-                    Unlike_2[k] += 1
-        if EitherDf:
-            table.add_column(Type[i - 1], result)
-        else:
-            table.add_column(Type[i - 2], result)
-        if i == 9:
-            table.add_column("异值1", Unlike_1)
-        elif i == 11:
-            table.add_column("异值2", Unlike_2)
-            for s in range(9):
-                Unlike_3[s] = Unlike_1[s] + Unlike_2[s]
-            table.add_column("异值和", Unlike_3)
-    print(table)
+    while True:
+        x = input("按n\n")
+        if x == 'n':
+            driver.get('http://www.yfcp885.com/lottery/K3/1401')
+            table = PrettyTable()
+            EitherDf = True
+            Unlike_1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, " "]
+            Unlike_2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, " "]
+            Unlike_3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, " "]
+            for i in range(1, 12):
+                if i == 6:
+                    EitherDf = False
+                    for j in range(5):
+                        FastClick('//*[@id="app"]/div[2]/div[2]/div[1]/div[1]/a[2]')
+                    continue
+                xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[1]/div/ul/li[ ' + str(i) + ' ]'
+                click(xpath)
+                result = []
+                for j in range(1, 11):
+                    xpath_1 = '//*[@id="fn_getoPenGame"]/tbody[2]/tr[' + str(j) + ']/td[4]/em[1]'
+                    xpath_2 = '//*[@id="fn_getoPenGame"]/tbody[2]/tr[' + str(j) + ']/td[4]/em[2]'
+                    temp = GetText(xpath_1) + " " + GetText(xpath_2)
+                    result.append(temp)
+                if i < 10:
+                    for k in range(9):
+                        if result[k][0] != result[k + 1][0]:
+                            Unlike_1[k] += 1
+                        if result[k][2] != result[k + 1][2]:
+                            Unlike_1[k] += 1
+                else:
+                    for k in range(9):
+                        if result[k][0] != result[k + 1][0]:
+                            Unlike_2[k] += 1
+                        if result[k][2] != result[k + 1][2]:
+                            Unlike_2[k] += 1
+                if EitherDf:
+                    table.add_column(Type[i - 1], result)
+                else:
+                    table.add_column(Type[i - 2], result)
+                if i == 9:
+                    table.add_column("异值1", Unlike_1)
+                elif i == 11:
+                    table.add_column("异值2", Unlike_2)
+                    for s in range(9):
+                        Unlike_3[s] = Unlike_1[s] + Unlike_2[s]
+                    table.add_column("异值和", Unlike_3)
+            print(table)
 if __name__ == '__main__':
     main()
