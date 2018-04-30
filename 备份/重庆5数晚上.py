@@ -4,19 +4,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
-user = 'silite'
-pwd = 'silite'
-# fireFoxOptions = webdriver.FirefoxOptions()
-# fireFoxOptions.set_headless()
-# profile = webdriver.FirefoxProfile()
-# profile.set_preference('permissions.default.stylesheet', 2)
-# profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
-# profile.set_preference('permissions.default.image', 2)
-# driver = webdriver.Firefox(firefox_profile=profile, firefox_options=fireFoxOptions)
-driver = webdriver.Chrome()
+user = 'zy0108'
+pwd = 'zy731027'
+fireFoxOptions = webdriver.FirefoxOptions()
+fireFoxOptions.set_headless()
+profile = webdriver.FirefoxProfile()
+profile.set_preference('permissions.default.stylesheet', 2)
+profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
+profile.set_preference('permissions.default.image', 2)
+driver = webdriver.Firefox(firefox_profile=profile, firefox_options=fireFoxOptions)
+#driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
-start_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 list_0_1 = [8, 9, 0, 1, 2]
 list_0_2 = [3, 4, 5, 6, 7]
 list_1_1 = [9, 0, 1, 2, 3]
@@ -75,41 +74,26 @@ def GetWantBuyAndOperation():
         num = WinningNumList[0][i]
         if num == '0':
             WantBuy_1 = list_0_1
-            WangBuy_2 = list_0_2
         elif num == '1':
             WantBuy_1 = list_1_1
-            WangBuy_2 = list_1_2
         elif num == '2':
             WantBuy_1 = list_2_1
-            WangBuy_2 = list_2_2
         elif num == '3':
             WantBuy_1 = list_3_1
-            WangBuy_2 = list_3_2
         elif num == '4':
             WantBuy_1 = list_4_1
-            WangBuy_2 = list_4_2
         elif num == '5':
             WantBuy_1 = list_5_1
-            WangBuy_2 = list_5_2
         elif num == '6':
             WantBuy_1 = list_6_1
-            WangBuy_2 = list_6_2
         elif num == '7':
             WantBuy_1 = list_7_1
-            WangBuy_2 = list_7_2
         elif num == '8':
             WantBuy_1 = list_8_1
-            WangBuy_2 = list_8_2
         elif num == '9':
             WantBuy_1 = list_9_1
-            WangBuy_2 = list_9_2
-        if num == WinningNumList[1][i]:
-            print("重庆" + position + "位 " + num + " 符合一组" + str(WantBuy_1))
-            Operation(WantBuy_1, i)
-        else:
-            print("重庆" + position + "位 " + num + " 符合两组" + str(WantBuy_1) + '和' + str(WangBuy_2))
-            Operation(WantBuy_1, i)
-            Operation(WangBuy_2, i)
+        print("重庆" + position + "位 " + num + " 符合一组" + str(WantBuy_1))
+        Operation(WantBuy_1, i)
 def click(x):
     time.sleep(0.5)
     driver.find_element_by_xpath(x).click()
@@ -165,25 +149,25 @@ def GetTime():
     Time = driver.find_element_by_xpath('/html/body/div/div[2]/div[1]/div[2]/em').text
     if len(Time) != 8:
         sys.exit()
-    sys.stdout.write('重庆时间' + Time + '\n')
+    sys.stdout.write('重庆5数晚上时间' + Time + '\n')
     sys.stdout.flush()
     if Time == '00:00:01':
         time.sleep(3)
         driver.find_element_by_xpath('/html/body/div[2]/div[2]/div/div/div[2]/span').click()
     return int(Time[-5] + Time[-4]) * 60 + int(Time[-2] + Time[-1])
-def waitTime(nowTime ,l ,h = 9120):
+def waitTime(nowTime ,l ,h = 120):
     while True:
         if nowTime > l and nowTime < h:
             return nowTime
         else:
-            if nowTime == 9120:
+            if nowTime == 120:
                 driver.refresh()
             nowTime = GetTime()
 def main():
     LogIn()
     while True:
         try:
-            url = 'http://www.yfcp885.com/lottery/SSC/1001'
+            url = 'http://www.yfcp885.com/lottery/SSC/1000'
             driver.get(url)
             nowTime = waitTime(GetTime() ,90)
             if nowTime > 90:
