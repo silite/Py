@@ -8,10 +8,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 user = 'silite'
 pwd = 'silite'
-# fireFoxOptions = webdriver.FirefoxOptions()
-# fireFoxOptions.set_headless()
-# driver = webdriver.Firefox(firefox_options=fireFoxOptions)
-driver = webdriver.Chrome()
+fireFoxOptions = webdriver.FirefoxOptions()
+fireFoxOptions.set_headless()
+driver = webdriver.Firefox(firefox_options=fireFoxOptions)
+#driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
 Type = ['江苏', '安徽', '广西', '湖北', '北京', '河北', '甘肃', '上海', '贵州', '吉林']
@@ -44,6 +44,7 @@ def GetTime():
     wait.until(
         EC.presence_of_all_elements_located((By.XPATH , '/html/body/div/div[2]/div[1]/div[2]/em'))
     )
+    time.sleep(1)
     Time = GetText('/html/body/div/div[2]/div[1]/div[2]/em')
     if len(Time) != 8:
         print("已停售")
@@ -98,8 +99,10 @@ def main():
                 for s in range(9):
                     Unlike_3[s] = Unlike_1[s] + Unlike_2[s]
                 table.add_column("异值和", Unlike_3)
-        Time = Time - 10
+        Time = Time - 11
         while True:
+            if Time == 0:
+                Time = 599
             print(str(Time // 60) + ':' + str(Time - (Time // 60 * 60)))
             print(table)
             time.sleep(1)
@@ -108,5 +111,6 @@ def main():
             if Time == 130:
                 print("\a")
                 break
+
 if __name__ == '__main__':
     main()
