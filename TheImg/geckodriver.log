@@ -7931,3 +7931,31 @@ Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpa
 Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
 1525098537552	Marionette	INFO	Listening on port 12835
 1525098537662	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525438216084	geckodriver	INFO	geckodriver 0.19.1
+1525438216099	geckodriver	INFO	Listening on 127.0.0.1:8317
+1525438219185	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.XnZbqHEth2Jv"
+*** You are running in headless mode.
+1525449226875	geckodriver	INFO	geckodriver 0.19.1
+1525449226875	geckodriver	INFO	Listening on 127.0.0.1:13040
+1525449229983	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.1IMoZVjfCdy4"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525449230476	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525449231836	Marionette	INFO	Listening on port 13048
+1525449232020	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.yfcp885.com/static/js/vendor.bf84652126926fb9b582.js, line 1: ReferenceError: webpackJsonp is not defined
+JavaScript error: http://www.yfcp885.com/static/js/manifest.a5dc144d828b0bdea4ab.js?_t1525449232360=0i, line 1: TypeError: e[n] is undefined
+1525449237831	geckodriver	INFO	geckodriver 0.19.1
+1525449237847	geckodriver	INFO	Listening on 127.0.0.1:13088
+1525449240934	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.Hc6kPhJ8KIiW"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525449241430	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525449242822	Marionette	INFO	Listening on port 13096
+1525449243008	Marionette	WARN	TLS certificate errors will be ignored for this session

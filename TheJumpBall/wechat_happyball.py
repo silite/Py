@@ -1,9 +1,11 @@
 from PIL import Image
-im = Image.open("./mmp2.png")
+import screenshot
+screenshot.GetScreenShot()
+im = Image.open("./happyball.png")
 RGBList = im.getdata()
 
 WIDTH = 1080
-BLOCK_RGB = (59, 59, 59)  #块平台RGB
+BLOCK_RGB = (59, 59, 59, 255)  #块平台RGBA
 CENTER_SCREEN_WIDTH = 540 #屏幕中心宽
 CENTER_FIRST_BLOCK = 731  #第一层块中心高
 FIRST_BLOCK_LEFT = 200    #预设纵向扫描左间距
@@ -30,18 +32,21 @@ def Get_LEFT_BLOCK_BORDER():
     for iter_width in range(START_LEFT, CENTER_SCREEN_WIDTH):
         NOW_RGB = RGBList[CENTER_FIRST_BLOCK * WIDTH + iter_width]
         LEFT_BLOCK_BORDER = iter_width
-        if NOW_RGB == (57, 57, 57): #RGB为块阴影
+        if NOW_RGB == (57, 57, 57, 255) or NOW_RGB[0] > 150: #RGBA为块阴影
             break
     """
         当出现上述角度过大时  纵向扫描
     """
-
     if LEFT_BLOCK_BORDER < 315 or LEFT_BLOCK_BORDER > 530:
         for iter_height in range(200):
             if RGBList[FIRST_BLOCK_LEFT + (CENTER_FIRST_BLOCK - iter_height) * WIDTH] != BLOCK_RGB:
                 LEFT_BLOCK_BORDER += iter_height #应计算旋转角度后的长度  暂定需修改
                 break
-
+    else:
+        return CENTER_SCREEN_WIDTH - LEFT_BLOCK_BORDER
+    """
+        左侧无 超出阈值
+    """
     if LEFT_BLOCK_BORDER == 729:
         LEFT_BLOCK_BORDER = 0
 
