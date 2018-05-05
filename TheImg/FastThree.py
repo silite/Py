@@ -15,16 +15,6 @@ driver = webdriver.Firefox(firefox_options=fireFoxOptions)
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
 Type = ['江苏', '安徽', '广西', '湖北', '北京', '河北', '甘肃', '上海']
-TheNewWeekResult_1 = []
-TheNewWeekResult_2 = []
-TheNewWeekResult_3 = []
-TheNewWeekResult_4 = []
-TheNewWeekResult_5 = []
-TheNewWeekResult_6 = []
-TheNewWeekResult_7 = []
-TheNewWeekResult_8 = []
-TheNewWeekResult_9 = []
-TheNewWeekResult_10 = []
 THREE_1 = [1, 2, 3]
 THREE_2 = [2, 3, 4]
 THREE_3 = [3, 4, 5]
@@ -74,12 +64,22 @@ def GetTime():
         sys.exit()
     return int(Time[-5] + Time[-4]) * 60 + int(Time[-2] + Time[-1])
 def color_red(x):
-    return Fore.LIGHTRED_EX + x + Fore.RESET
+    return Fore.LIGHTRED_EX + str(x) + Fore.RESET
 def color_blue(x):
-    return Fore.LIGHTBLUE_EX + x + Fore.RESET
+    return Fore.LIGHTBLUE_EX + str(x) + Fore.RESET
 def main():
     LogIn()
     while True:
+        TheNewWeekResult_1 = []
+        TheNewWeekResult_2 = []
+        TheNewWeekResult_3 = []
+        TheNewWeekResult_4 = []
+        TheNewWeekResult_5 = []
+        TheNewWeekResult_6 = []
+        TheNewWeekResult_7 = []
+        TheNewWeekResult_8 = []
+        TheNewWeekResult_9 = []
+        TheNewWeekResult_10 = []
         driver.get('http://www.yfcp885.com/lottery/K3/1401')
         table = PrettyTable()
         EitherDf = True
@@ -216,6 +216,10 @@ def main():
                     big_10 += 1
                 if TheNewWeekResult_10[THREE[j] - 1][1] == '单':
                     danshu_10 += 1
+            if big_1 < 2:
+                big_1 = color_blue(big_1)
+            else:
+                big_1 = color_red(big_1)
             table.add_column('三' + name, [color_red(str(big_1)) + ' | ' + color_blue(str(danshu_1)), color_red(str(big_2)) + ' | ' + color_blue(str(danshu_2)), color_red(str(big_3)) + ' | ' + color_blue(str(danshu_3)), color_red(str(big_4)) + ' | ' + color_blue(str(danshu_4)), color_red(str(big_5)) + ' | ' + color_blue(str(danshu_5)), color_red(str(big_6)) + ' | ' + color_blue(str(danshu_6)), color_red(str(big_7)) + ' | ' + color_blue(str(danshu_7)), color_red(str(big_8)) + ' | ' + color_blue(str(danshu_8)), color_red(str(big_9)) + ' | ' + color_blue(str(danshu_9)), color_red(str(big_10)) + ' | ' + color_blue(str(danshu_10))])
         for i in range(1, 5):
             big_1 = 0
@@ -321,7 +325,7 @@ def main():
                 SEVEN = SEVEN_2
                 name = '2'
 
-            for j in range(5):
+            for j in range(7):
                 if TheNewWeekResult_1[SEVEN[j] - 1][0] == '大':
                     big_1 += 1
                 if TheNewWeekResult_1[SEVEN[j] - 1][1] == '单':

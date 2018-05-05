@@ -1,0 +1,11 @@
+1525499117783	geckodriver	INFO	geckodriver 0.19.1
+1525499117798	geckodriver	INFO	Listening on 127.0.0.1:10479
+1525499120888	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.Wb5TV22JnE38"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525499121396	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525499122684	Marionette	INFO	Listening on port 10487
+1525499122904	Marionette	WARN	TLS certificate errors will be ignored for this session

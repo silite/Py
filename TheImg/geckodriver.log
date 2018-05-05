@@ -7959,3 +7959,47 @@ Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpa
 Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
 1525449242822	Marionette	INFO	Listening on port 13096
 1525449243008	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525497489868	geckodriver	INFO	geckodriver 0.19.1
+1525497489868	geckodriver	INFO	Listening on 127.0.0.1:8988
+1525497492956	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.t3mqP2ZFqnJ5"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497494358	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497495878	Marionette	INFO	Listening on port 8996
+1525497496158	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+ng on 127.0.0.1:9110
+1525497529521	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.5e1le4TpGJBm"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497529974	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497531314	Marionette	INFO	Listening on port 9118
+1525497531570	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525497669203	geckodriver	INFO	geckodriver 0.19.1
+1525497669203	geckodriver	INFO	Listening on 127.0.0.1:9590
+1525497672309	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.f3YkNoOD3CCF"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497672784	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497674114	Marionette	INFO	Listening on port 9598
+1525497674354	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525497683778	geckodriver	INFO	geckodriver 0.19.1
+1525497683778	geckodriver	INFO	Listening on 127.0.0.1:9748
+1525497686868	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.o8MXALQwyazm"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497687358	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525497688708	Marionette	INFO	Listening on port 9756
+1525497688888	Marionette	WARN	TLS certificate errors will be ignored for this session
