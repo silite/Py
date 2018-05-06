@@ -1,9 +1,5 @@
 from PIL import Image
-import os
-import screenshot
-screenshot.GetScreenShot()
-im = Image.open("./happyball.png")
-RGBList = im.getdata()
+import os, screenshot, time, sys
 
 WIDTH = 1080
 BLOCK_RGB = (59, 59, 59, 255)  #块平台RGBA
@@ -15,6 +11,8 @@ START_LEFT = 112          #开始扫描初始化
 START_RIGHT = 960
 LEFT_BLOCK_BORDER = 0     #预设扫到的左边下落点
 RIGHT_BLOCK_BORDER = 0
+ORANGE_BLOCK_RGB = (255, 117, 70, 255)
+OVER_BACK_RGB = (79, 79, 80, 255)
 
 def Get_LEFT_BLOCK_BORDER():
     """
@@ -40,7 +38,7 @@ def Get_LEFT_BLOCK_BORDER():
             if LEFT_BLOCK_BORDER < 150:  #遇到刚开始向右扫描时就扫到上述阴影
                 return 400 #需修改
             break
-        if NOW_RGB[0] > 150:
+        if NOW_RGB[0] > 150 and NOW_RGB != ORANGE_BLOCK_RGB:
             return CENTER_SCREEN_WIDTH - LEFT_BLOCK_BORDER + 100
     """
         当出现上述角度过大时  纵向扫描
@@ -76,7 +74,7 @@ def Get_RIGHT_BLOCK_BORDER():
             if RIGHT_BLOCK_BORDER > 800:
                 return 400
             break
-        if NOW_RGB[0] > 150:
+        if NOW_RGB[0] > 150 and NOW_RGB != ORANGE_BLOCK_RGB:
             return RIGHT_BLOCK_BORDER - CENTER_SCREEN_WIDTH + 100
     print(RIGHT_BLOCK_BORDER)
     """
@@ -92,6 +90,7 @@ def Get_RIGHT_BLOCK_BORDER():
                 break
 
     return RIGHT_BLOCK_BORDER
+
 
 def GetSwipeDistance(border):
     if border > 650:
@@ -111,15 +110,27 @@ def SwipeScreen(method, distance):
         os.system('adb shell input swipe ' + distance + ' ' + distance + ' 0 0')
 
 def main():
-    LEFT_BLOCK_BORDER = Get_LEFT_BLOCK_BORDER()
-    if LEFT_BLOCK_BORDER != 0:
-        method = 'left'
-        SwipeScreen(method, GetSwipeDistance(LEFT_BLOCK_BORDER))
-    else:
-        RIGHT_BLOCK_BORDER = Get_RIGHT_BLOCK_BORDER()
-        print(RIGHT_BLOCK_BORDER)
-        method = 'right'
-        SwipeScreen(method, GetSwipeDistance(RIGHT_BLOCK_BORDER))
+    while True:
+        screenshot.GetScreenShot()
+        im = Image.open("./happyball.png")
+        global RGBList
+        RGBList = im.getdata()
+        if RGBList[WIDTH * 20 + CENTER_SCREEN_WIDTH] != OVER_BACK_RGB:
+            LEFT_BLOCK_BORDER = Get_LEFT_BLOCK_BORDER()
+            if LEFT_BLOCK_BORDER != 0:
+                method = 'left'
+                distance = GetSwipeDistance(LEFT_BLOCK_BORDER)
+                SwipeScreen(method, distance)
+            else:
+                RIGHT_BLOCK_BORDER = Get_RIGHT_BLOCK_BORDER()
+                method = 'right'
+                distance = GetSwipeDistance(RIGHT_BLOCK_BORDER)
+                SwipeScreen(method, distance)
+            time.sleep(2)
+        else:
+            print('游戏结束')
+            input()
+            sys.exit()
 
 if __name__ == '__main__':
     main()

@@ -9,3 +9,309 @@ Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpa
 Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
 1525499122684	Marionette	INFO	Listening on port 10487
 1525499122904	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525589365121	geckodriver	INFO	geckodriver 0.19.1
+1525589365137	geckodriver	INFO	Listening on 127.0.0.1:7762
+1525589368230	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.TZtaxm9y4yap"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525589369646	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525589371200	Marionette	INFO	Listening on port 7770
+1525589371414	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525589731976	geckodriver	INFO	geckodriver 0.19.1
+1525589731976	geckodriver	INFO	Listening on 127.0.0.1:8225
+1525589735070	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.yrDIotJC30Rz"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525589735538	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525589736964	Marionette	INFO	Listening on port 8233
+1525589737124	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525589796186	geckodriver	INFO	geckodriver 0.19.1
+1525589796195	geckodriver	INFO	Listening on 127.0.0.1:8508
+1525589799272	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.PtMXrtqaxYtg"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525589799776	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525589801114	Marionette	INFO	Listening on port 8518
+1525589801282	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525590606036	geckodriver	INFO	geckodriver 0.19.1
+1525590606045	geckodriver	INFO	Listening on 127.0.0.1:9116
+1525590609121	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.FdCx6zhbKppw"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525590609600	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525590611106	Marionette	INFO	Listening on port 9124
+1525590611136	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525591752639	geckodriver	INFO	geckodriver 0.19.1
+1525591752651	geckodriver	INFO	Listening on 127.0.0.1:14918
+1525591755721	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.rmv4eA1TkOL6"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525591756704	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525591758612	Marionette	INFO	Listening on port 14926
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525591758842	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525591930810	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1525592024412	geckodriver	INFO	geckodriver 0.19.1
+1525592024424	geckodriver	INFO	Listening on 127.0.0.1:1447
+1525592027503	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.qSPNTq91yUD3"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525592028280	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525592030070	Marionette	INFO	Listening on port 1455
+1525592030618	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525592201630	geckodriver	INFO	geckodriver 0.19.1
+1525592201642	geckodriver	INFO	Listening on 127.0.0.1:1903
+1525592332313	geckodriver	INFO	geckodriver 0.19.1
+1525592332325	geckodriver	INFO	Listening on 127.0.0.1:1934
+1525592335395	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.qJcniUUthNHW"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525592335956	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525592338558	Marionette	INFO	Listening on port 1942
+1525592339016	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525592472398	geckodriver	INFO	geckodriver 0.19.1
+1525592472411	geckodriver	INFO	Listening on 127.0.0.1:2858
+1525592475501	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.8LBS7rdbbdTH"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525592476678	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525592478914	Marionette	INFO	Listening on port 2868
+1525592479262	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1525593118601	geckodriver	INFO	geckodriver 0.19.1
+1525593118634	geckodriver	INFO	Listening on 127.0.0.1:3431
+1525593121672	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.D6XUh34yZT2m"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593122702	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593125438	Marionette	INFO	Listening on port 3440
+1525593125814	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1525593183390	geckodriver	INFO	geckodriver 0.19.1
+1525593183405	geckodriver	INFO	Listening on 127.0.0.1:4158
+1525593186469	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.pzC7p86czF7h"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593187256	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593189614	Marionette	INFO	Listening on port 4171
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593190082	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525593464559	geckodriver	INFO	geckodriver 0.19.1
+1525593464571	geckodriver	INFO	Listening on 127.0.0.1:5647
+1525593522050	geckodriver	INFO	geckodriver 0.19.1
+1525593522061	geckodriver	INFO	Listening on 127.0.0.1:5688
+1525593525129	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.5B3FvAEENQpD"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593525946	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593528104	Marionette	INFO	Listening on port 5696
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593528290	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525593560862	geckodriver	INFO	geckodriver 0.19.1
+1525593560879	geckodriver	INFO	Listening on 127.0.0.1:5761
+1525593563986	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.knyTzBwEhf4U"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593564726	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593567194	Marionette	INFO	Listening on port 5769
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593568781	geckodriver	INFO	geckodriver 0.19.1
+1525593568796	geckodriver	INFO	Listening on 127.0.0.1:5790
+1525593571857	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.Fzb5xFvTGXhJ"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593572718	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1525593574552	Marionette	INFO	Listening on port 5800
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593575024	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.yfcp885.com/static/js/manifest.a5dc144d828b0bdea4ab.js, line 1: TypeError: e[n] is undefined
+1525593656068	geckodriver	INFO	geckodriver 0.19.1
+1525593656087	geckodriver	INFO	Listening on 127.0.0.1:6355
+1525593659156	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.8QGFJaIcyK7h"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593661550	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593668260	Marionette	INFO	Listening on port 6363
+1525593669096	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1525593805132	geckodriver	INFO	geckodriver 0.19.1
+1525593805154	geckodriver	INFO	Listening on 127.0.0.1:6843
+1525593808187	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.0C2vCJX01vGC"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593809286	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593811536	Marionette	INFO	Listening on port 6852
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525593811838	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525594390617	geckodriver	INFO	geckodriver 0.19.1
+1525594390636	geckodriver	INFO	Listening on 127.0.0.1:9082
+1525594393670	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.8jSCU8sd0uwu"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525594394534	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525594400490	Marionette	INFO	Listening on port 9093
+1525594401146	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: http://www.yfcp885.com/static/js/manifest.a5dc144d828b0bdea4ab.js, line 1: TypeError: e[n] is undefined
+1525594479825	geckodriver	INFO	geckodriver 0.19.1
+1525594479840	geckodriver	INFO	Listening on 127.0.0.1:9169
+1525594482949	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.ddziQ52Hr8KE"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525594484208	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525594486980	Marionette	INFO	Listening on port 9178
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525594487210	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525597291039	geckodriver	INFO	geckodriver 0.19.1
+1525597291051	geckodriver	INFO	Listening on 127.0.0.1:10468
+1525597294172	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.TmTxlJOG7SU7"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525597295472	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525597296958	Marionette	INFO	Listening on port 10477
+1525597297364	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1000B,name=PAPZ::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 28072, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26964, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26964, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/i[Parent 28072, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+g_DidComposite) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 10076, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 37560, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 37560, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/b[Parent 10076, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 47532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 47532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+2, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 39580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 39580, Chrome_ChildThread] WARNING[Parent 26672, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 41140, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 45476, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 29352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 29352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrom[Parent 45476, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ errors will be ignored for this session
+1525599438972	geckodriver	INFO	geckodriver 0.19.1
+1525599438972	geckodriver	INFO	Listening on 127.0.0.1:1506
+1525599442040	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.mOJtvWlIhz86"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525599442648	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525599444258	Marionette	INFO	Listening on port 1514
+1525599445210	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 15440, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19172, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19172, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/srs\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525599553594	Marionette	INFO	Listening on port 1977
+1525599553628	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 33180, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16468, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16468, Chrome_ChildThread] WARNING: pipe er[Parent 33180, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13848, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Child 18288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 18288, Chrome_ChildThread] WARNING: pipe error: 109: file [Parent 5652, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 38068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 38068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+26926fb9b582.js, line 1: ReferenceError: webpackJsonp is not defined
+JavaScript error: http://www.yfcp885.com/static/js/manifest.a5dc144d828b0bdea4ab.js?_t1525600103904=0i, line 1: TypeError: e[n] is undefined
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 5724, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26808, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26808, Chrome_ChildThread] WARNING: pipe error: 109[Parent 5724, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[C

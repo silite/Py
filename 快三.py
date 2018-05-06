@@ -14,19 +14,13 @@ driver = webdriver.Firefox(firefox_options=fireFoxOptions)
 # driver = webdriver.Chrome()
 driver.get('http://www.yfcp885.com/login')
 wait = WebDriverWait(driver, 10)
-Type = ['江苏', '安徽', '广西', '湖北', '北京', '河北', '甘肃', '上海']
+Type = ['江', '安', '广', '湖', '北', '河', '甘', '上']
 THREE_1 = [1, 2, 3]
 THREE_2 = [2, 3, 4]
 THREE_3 = [3, 4, 5]
 THREE_4 = [4, 5, 6]
 THREE_5 = [5, 6, 7]
 THREE_6 = [6, 7, 8]
-FIVE_1 = [1, 2, 3, 4, 5]
-FIVE_2 = [2, 3, 4, 5, 6]
-FIVE_3 = [3, 4, 5, 6, 7]
-FIVE_4 = [4, 5, 6, 7, 8]
-SEVEN_1 = [1, 2, 3, 4, 5, 6, 7]
-SEVEN_2 = [2, 3, 4, 5, 6, 7, 8]
 init(autoreset = False)
 def LogIn():
     element_user = wait.until(
@@ -70,16 +64,8 @@ def color_blue(x):
 def main():
     LogIn()
     while True:
-        TheNewWeekResult_1 = []
-        TheNewWeekResult_2 = []
-        TheNewWeekResult_3 = []
-        TheNewWeekResult_4 = []
-        TheNewWeekResult_5 = []
-        TheNewWeekResult_6 = []
-        TheNewWeekResult_7 = []
-        TheNewWeekResult_8 = []
-        TheNewWeekResult_9 = []
-        TheNewWeekResult_10 = []
+        TheNewWeekResult = [[], [], [], [], [], [], [], [], [], []]
+        noColor_TheNewWeekResult = [[], [], [], [], [], [], [], [], [], []]
         driver.get('http://www.yfcp885.com/lottery/K3/1401')
         table = PrettyTable()
         EitherDf = True
@@ -93,525 +79,112 @@ def main():
                 continue
             xpath = '//*[@id="app"]/div[2]/div[2]/div[1]/div[1]/div/ul/li[ ' + str(i) + ' ]'
             click(xpath)
-            result = []
+            result_1 = []
             for j in range(1, 11):
                 xpath_1 = '//*[@id="fn_getoPenGame"]/tbody[2]/tr[' + str(j) + ']/td[4]/em[1]'
                 xpath_2 = '//*[@id="fn_getoPenGame"]/tbody[2]/tr[' + str(j) + ']/td[4]/em[2]'
                 temp_1 = GetText(xpath_1)
                 temp_2 = GetText(xpath_2)
-                if j == 1:
-                    TheNewWeekResult_1.append([temp_1, temp_2])
-                elif j == 2:
-                    TheNewWeekResult_2.append([temp_1, temp_2])
-                elif j == 3:
-                    TheNewWeekResult_3.append([temp_1, temp_2])
-                elif j == 4:
-                    TheNewWeekResult_4.append([temp_1, temp_2])
-                elif j == 5:
-                    TheNewWeekResult_5.append([temp_1, temp_2])
-                elif j == 6:
-                    TheNewWeekResult_6.append([temp_1, temp_2])
-                elif j == 7:
-                    TheNewWeekResult_7.append([temp_1, temp_2])
-                elif j == 8:
-                    TheNewWeekResult_8.append([temp_1, temp_2])
-                elif j == 9:
-                    TheNewWeekResult_9.append([temp_1, temp_2])
-                elif j == 10:
-                    TheNewWeekResult_10.append([temp_1, temp_2])
+                TheNewWeekResult[j - 1].append([temp_1, temp_2])
+                noColor_TheNewWeekResult[j - 1].append([temp_1, temp_2])
                 if temp_1 == '大':
                     temp_1 = color_red(temp_1)
                 else:
                     temp_1 = Fore.LIGHTWHITE_EX + temp_1 + Fore.RESET
+                result_1.append(temp_1)
+            if EitherDf:
+                table.add_column(Type[i - 1], result_1)
+            else:
+                table.add_column(Type[i - 2], result_1)
+        EitherDf = True
+        for k in range(8):
+            result_2 = []
+            for j in range(1, 11):
+                temp_2 = TheNewWeekResult[j - 1][k][1]
                 if temp_2 == '单':
                     temp_2 = color_blue(temp_2)
                 else:
                     temp_2 = Fore.LIGHTWHITE_EX + temp_2 + Fore.RESET
-                temp = temp_1 + " " + temp_2
-                result.append(temp)
+                result_2.append(temp_2)
             if EitherDf:
-                table.add_column(Type[i - 1], result)
+                table.add_column(Type[k], result_2)
             else:
-                table.add_column(Type[i - 2], result)
+                table.add_column(Type[k], result_2)
         Time = Time - 12
+        result_3 = [[], [], [], [], [], [], [], [], [], []]
+        result_4 = [[], [], [], [], [], [], [], [], [], []]
         for i in range(1, 7):
-            big_1 = 0
-            danshu_1 = 0
-            big_2 = 0
-            danshu_2 = 0
-            big_3 = 0
-            danshu_3 = 0
-            big_4 = 0
-            danshu_4 = 0
-            big_5 = 0
-            danshu_5 = 0
-            big_6 = 0
-            danshu_6 = 0
-            big_7 = 0
-            danshu_7 = 0
-            big_8 = 0
-            danshu_8 = 0
-            big_9 = 0
-            danshu_9 = 0
-            big_10 = 0
-            danshu_10 = 0
+            big = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            danshu = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
             if i == 1:
                 THREE = THREE_1
-                name = '1'
             elif i == 2:
                 THREE = THREE_2
-                name = '2'
             elif i == 3:
                 THREE = THREE_3
-                name = '3'
             elif i == 4:
                 THREE = THREE_4
-                name = '4'
             elif i == 5:
                 THREE = THREE_5
-                name = '5'
             elif i == 6:
                 THREE = THREE_6
-                name = '6'
 
             for j in range(3):
-                if TheNewWeekResult_1[THREE[j] - 1][0] == '大':
-                    big_1 += 1
-                if TheNewWeekResult_1[THREE[j] - 1][1] == '单':
-                    danshu_1 += 1
-                if TheNewWeekResult_2[THREE[j] - 1][0] == '大':
-                    big_2 += 1
-                if TheNewWeekResult_2[THREE[j] - 1][1] == '单':
-                    danshu_2 += 1
-                if TheNewWeekResult_3[THREE[j] - 1][0] == '大':
-                    big_3 += 1
-                if TheNewWeekResult_3[THREE[j] - 1][1] == '单':
-                    danshu_3 += 1
-                if TheNewWeekResult_4[THREE[j] - 1][0] == '大':
-                    big_4 += 1
-                if TheNewWeekResult_4[THREE[j] - 1][1] == '单':
-                    danshu_4 += 1
-                if TheNewWeekResult_5[THREE[j] - 1][0] == '大':
-                    big_5 += 1
-                if TheNewWeekResult_5[THREE[j] - 1][1] == '单':
-                    danshu_5 += 1
-                if TheNewWeekResult_6[THREE[j] - 1][0] == '大':
-                    big_6 += 1
-                if TheNewWeekResult_6[THREE[j] - 1][1] == '单':
-                    danshu_6 += 1
-                if TheNewWeekResult_7[THREE[j] - 1][0] == '大':
-                    big_7 += 1
-                if TheNewWeekResult_7[THREE[j] - 1][1] == '单':
-                    danshu_7 += 1
-                if TheNewWeekResult_8[THREE[j] - 1][0] == '大':
-                    big_8 += 1
-                if TheNewWeekResult_8[THREE[j] - 1][1] == '单':
-                    danshu_8 += 1
-                if TheNewWeekResult_9[THREE[j] - 1][0] == '大':
-                    big_9 += 1
-                if TheNewWeekResult_9[THREE[j] - 1][1] == '单':
-                    danshu_9 += 1
-                if TheNewWeekResult_10[THREE[j] - 1][0] == '大':
-                    big_10 += 1
-                if TheNewWeekResult_10[THREE[j] - 1][1] == '单':
-                    danshu_10 += 1
-            yuzhi = 2
-            if big_1 < yuzhi:
-                big_1 = color_blue(big_1)
+                for k in range(10):
+                    if TheNewWeekResult[k][THREE[j] - 1][0] == '大':
+                        big[k] += 1
+                    if TheNewWeekResult[k][THREE[j] - 1][1] == '单':
+                        danshu[k] += 1
+            for x in range(10):
+                if big[x] < 2:
+                    big[x] = color_blue(big[x])
+                else:
+                    big[x] = color_red(big[x])
+                if danshu[x] < 2:
+                    danshu[x] = color_blue(danshu[x])
+                else:
+                    danshu[x] = color_red(danshu[x])
+                result_3[i - 1].append(big[x])
+                result_4[i - 1].append(danshu[x])
+        for i in range(1, 7):
+            table.add_column('大' + str(i), result_3[i - 1])
+        for i in range(1, 7):
+            table.add_column('单' + str(i), result_4[i - 1])
+        table_2 = PrettyTable()
+        big_either = []
+        danshu_either = []
+        for i in range(6):
+            for j in range(2):
+                either = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+                for k in range(9):
+                    for x in range(3):
+                        if noColor_TheNewWeekResult[k][i + x][j] != noColor_TheNewWeekResult[k + 1][i + x][j]:
+                            either[k] += 1
+                    if either[k] < 2:
+                        either[k] = color_blue(either[k])
+                    else:
+                        either[k] = color_red(either[k])
+                if j == 0:
+                    big_either.append(either)
+                else:
+                    danshu_either.append(either)
+        for i in range(2):
+            if i == 0:
+                name = '大'
+                list_ = big_either
             else:
-                big_1 = color_red(big_1)
-            if big_2 < yuzhi:
-                big_2 = color_blue(big_2)
-            else:
-                big_2 = color_red(big_2)
-            if big_3 < yuzhi:
-                big_3 = color_blue(big_3)
-            else:
-                big_3 = color_red(big_3)
-            if big_4 < yuzhi:
-                big_4 = color_blue(big_4)
-            else:
-                big_4 = color_red(big_4)
-            if big_5 < yuzhi:
-                big_5 = color_blue(big_5)
-            else:
-                big_5 = color_red(big_5)
-            if big_6 < yuzhi:
-                big_6 = color_blue(big_6)
-            else:
-                big_6 = color_red(big_6)
-            if big_7 < yuzhi:
-                big_7 = color_blue(big_7)
-            else:
-                big_7 = color_red(big_7)
-            if big_8 < yuzhi:
-                big_8 = color_blue(big_8)
-            else:
-                big_8 = color_red(big_8 )
-            if big_9 < yuzhi:
-                big_9 = color_blue(big_9)
-            else:
-                big_9 = color_red(big_9)
-            if big_10 < yuzhi:
-                big_10 = color_blue(big_10)
-            else:
-                big_10 = color_red(big_10)
-            if danshu_1 < yuzhi:
-                danshu_1 = color_blue(danshu_1)
-            else:
-                danshu_1 = color_red(danshu_1)
-            if danshu_2 < yuzhi:
-                danshu_2 = color_blue(danshu_2)
-            else:
-                danshu_2 = color_red(danshu_2)
-            if danshu_3 < yuzhi:
-                danshu_3 = color_blue(danshu_3)
-            else:
-                danshu_3 = color_red(danshu_3)
-            if danshu_4 < yuzhi:
-                danshu_4 = color_blue(danshu_4)
-            else:
-                danshu_4 = color_red(danshu_4)
-            if danshu_5 < yuzhi:
-                danshu_5 = color_blue(danshu_5)
-            else:
-                danshu_5 = color_red(danshu_5)
-            if danshu_6 < yuzhi:
-                danshu_6 = color_blue(danshu_6)
-            else:
-                danshu_6 = color_red(danshu_6)
-            if danshu_7 < yuzhi:
-                danshu_7 = color_blue(danshu_7)
-            else:
-                danshu_7 = color_red(danshu_7)
-            if danshu_8 < yuzhi:
-                danshu_8 = color_blue(danshu_8)
-            else:
-                danshu_8 = color_red(danshu_8)
-            if danshu_9 < yuzhi:
-                danshu_9 = color_blue(danshu_9)
-            else:
-                danshu_9 = color_red(danshu_9)
-            if danshu_10 < yuzhi:
-                danshu_10 = color_blue(danshu_10)
-            else:
-                danshu_10 = color_red(danshu_10)
-
-            table.add_column('三' + name, [big_1 + ' | ' + danshu_1, big_2 + ' | ' + danshu_2, big_3 + ' | ' + danshu_3, big_4 + ' | ' + danshu_4, big_5 + ' | ' + danshu_5, big_6 + ' | ' + danshu_6, big_7 + ' | ' + danshu_7, big_8 + ' | ' + danshu_8, big_9 + ' | ' + danshu_9, big_10 + ' | ' + danshu_10])
-        for i in range(1, 5):
-            big_1 = 0
-            danshu_1 = 0
-            big_2 = 0
-            danshu_2 = 0
-            big_3 = 0
-            danshu_3 = 0
-            big_4 = 0
-            danshu_4 = 0
-            big_5 = 0
-            danshu_5 = 0
-            big_6 = 0
-            danshu_6 = 0
-            big_7 = 0
-            danshu_7 = 0
-            big_8 = 0
-            danshu_8 = 0
-            big_9 = 0
-            danshu_9 = 0
-            big_10 = 0
-            danshu_10 = 0
-            if i == 1:
-                FIVE = FIVE_1
-                name = '1'
-            elif i == 2:
-                FIVE = FIVE_2
-                name = '2'
-            elif i == 3:
-                FIVE = FIVE_3
-                name = '3'
-            elif i == 4:
-                FIVE = FIVE_4
-                name = '4'
-
-            for j in range(5):
-                if TheNewWeekResult_1[FIVE[j] - 1][0] == '大':
-                    big_1 += 1
-                if TheNewWeekResult_1[FIVE[j] - 1][1] == '单':
-                    danshu_1 += 1
-                if TheNewWeekResult_2[FIVE[j] - 1][0] == '大':
-                    big_2 += 1
-                if TheNewWeekResult_2[FIVE[j] - 1][1] == '单':
-                    danshu_2 += 1
-                if TheNewWeekResult_3[FIVE[j] - 1][0] == '大':
-                    big_3 += 1
-                if TheNewWeekResult_3[FIVE[j] - 1][1] == '单':
-                    danshu_3 += 1
-                if TheNewWeekResult_4[FIVE[j] - 1][0] == '大':
-                    big_4 += 1
-                if TheNewWeekResult_4[FIVE[j] - 1][1] == '单':
-                    danshu_4 += 1
-                if TheNewWeekResult_5[FIVE[j] - 1][0] == '大':
-                    big_5 += 1
-                if TheNewWeekResult_5[FIVE[j] - 1][1] == '单':
-                    danshu_5 += 1
-                if TheNewWeekResult_6[FIVE[j] - 1][0] == '大':
-                    big_6 += 1
-                if TheNewWeekResult_6[FIVE[j] - 1][1] == '单':
-                    danshu_6 += 1
-                if TheNewWeekResult_7[FIVE[j] - 1][0] == '大':
-                    big_7 += 1
-                if TheNewWeekResult_7[FIVE[j] - 1][1] == '单':
-                    danshu_7 += 1
-                if TheNewWeekResult_8[FIVE[j] - 1][0] == '大':
-                    big_8 += 1
-                if TheNewWeekResult_8[FIVE[j] - 1][1] == '单':
-                    danshu_8 += 1
-                if TheNewWeekResult_9[FIVE[j] - 1][0] == '大':
-                    big_9 += 1
-                if TheNewWeekResult_9[FIVE[j] - 1][1] == '单':
-                    danshu_9 += 1
-                if TheNewWeekResult_10[FIVE[j] - 1][0] == '大':
-                    big_10 += 1
-                if TheNewWeekResult_10[FIVE[j] - 1][1] == '单':
-                    danshu_10 += 1
-            yuzhi = 3
-            if big_1 < yuzhi:
-                big_1 = color_blue(big_1)
-            else:
-                big_1 = color_red(big_1)
-            if big_2 < yuzhi:
-                big_2 = color_blue(big_2)
-            else:
-                big_2 = color_red(big_2)
-            if big_3 < yuzhi:
-                big_3 = color_blue(big_3)
-            else:
-                big_3 = color_red(big_3)
-            if big_4 < yuzhi:
-                big_4 = color_blue(big_4)
-            else:
-                big_4 = color_red(big_4)
-            if big_5 < yuzhi:
-                big_5 = color_blue(big_5)
-            else:
-                big_5 = color_red(big_5)
-            if big_6 < yuzhi:
-                big_6 = color_blue(big_6)
-            else:
-                big_6 = color_red(big_6)
-            if big_7 < yuzhi:
-                big_7 = color_blue(big_7)
-            else:
-                big_7 = color_red(big_7)
-            if big_8 < yuzhi:
-                big_8 = color_blue(big_8)
-            else:
-                big_8 = color_red(big_8 )
-            if big_9 < yuzhi:
-                big_9 = color_blue(big_9)
-            else:
-                big_9 = color_red(big_9)
-            if big_10 < yuzhi:
-                big_10 = color_blue(big_10)
-            else:
-                big_10 = color_red(big_10)
-            if danshu_1 < yuzhi:
-                danshu_1 = color_blue(danshu_1)
-            else:
-                danshu_1 = color_red(danshu_1)
-            if danshu_2 < yuzhi:
-                danshu_2 = color_blue(danshu_2)
-            else:
-                danshu_2 = color_red(danshu_2)
-            if danshu_3 < yuzhi:
-                danshu_3 = color_blue(danshu_3)
-            else:
-                danshu_3 = color_red(danshu_3)
-            if danshu_4 < yuzhi:
-                danshu_4 = color_blue(danshu_4)
-            else:
-                danshu_4 = color_red(danshu_4)
-            if danshu_5 < yuzhi:
-                danshu_5 = color_blue(danshu_5)
-            else:
-                danshu_5 = color_red(danshu_5)
-            if danshu_6 < yuzhi:
-                danshu_6 = color_blue(danshu_6)
-            else:
-                danshu_6 = color_red(danshu_6)
-            if danshu_7 < yuzhi:
-                danshu_7 = color_blue(danshu_7)
-            else:
-                danshu_7 = color_red(danshu_7)
-            if danshu_8 < yuzhi:
-                danshu_8 = color_blue(danshu_8)
-            else:
-                danshu_8 = color_red(danshu_8)
-            if danshu_9 < yuzhi:
-                danshu_9 = color_blue(danshu_9)
-            else:
-                danshu_9 = color_red(danshu_9)
-            if danshu_10 < yuzhi:
-                danshu_10 = color_blue(danshu_10)
-            else:
-                danshu_10 = color_red(danshu_10)
-            table.add_column('五' + name, [big_1 + ' | ' + danshu_1, big_2 + ' | ' + danshu_2, big_3 + ' | ' + danshu_3, big_4 + ' | ' + danshu_4, big_5 + ' | ' + danshu_5, big_6 + ' | ' + danshu_6, big_7 + ' | ' + danshu_7, big_8 + ' | ' + danshu_8, big_9 + ' | ' + danshu_9, big_10 + ' | ' + danshu_10])
-        for i in range(1, 3):
-            big_1 = 0
-            danshu_1 = 0
-            big_2 = 0
-            danshu_2 = 0
-            big_3 = 0
-            danshu_3 = 0
-            big_4 = 0
-            danshu_4 = 0
-            big_5 = 0
-            danshu_5 = 0
-            big_6 = 0
-            danshu_6 = 0
-            big_7 = 0
-            danshu_7 = 0
-            big_8 = 0
-            danshu_8 = 0
-            big_9 = 0
-            danshu_9 = 0
-            big_10 = 0
-            danshu_10 = 0
-            if i == 1:
-                SEVEN = SEVEN_1
-                name = '1'
-            elif i == 2:
-                SEVEN = SEVEN_2
-                name = '2'
-
-            for j in range(7):
-                if TheNewWeekResult_1[SEVEN[j] - 1][0] == '大':
-                    big_1 += 1
-                if TheNewWeekResult_1[SEVEN[j] - 1][1] == '单':
-                    danshu_1 += 1
-                if TheNewWeekResult_2[SEVEN[j] - 1][0] == '大':
-                    big_2 += 1
-                if TheNewWeekResult_2[SEVEN[j] - 1][1] == '单':
-                    danshu_2 += 1
-                if TheNewWeekResult_3[SEVEN[j] - 1][0] == '大':
-                    big_3 += 1
-                if TheNewWeekResult_3[SEVEN[j] - 1][1] == '单':
-                    danshu_3 += 1
-                if TheNewWeekResult_4[SEVEN[j] - 1][0] == '大':
-                    big_4 += 1
-                if TheNewWeekResult_4[SEVEN[j] - 1][1] == '单':
-                    danshu_4 += 1
-                if TheNewWeekResult_5[SEVEN[j] - 1][0] == '大':
-                    big_5 += 1
-                if TheNewWeekResult_5[SEVEN[j] - 1][1] == '单':
-                    danshu_5 += 1
-                if TheNewWeekResult_6[SEVEN[j] - 1][0] == '大':
-                    big_6 += 1
-                if TheNewWeekResult_6[SEVEN[j] - 1][1] == '单':
-                    danshu_6 += 1
-                if TheNewWeekResult_7[SEVEN[j] - 1][0] == '大':
-                    big_7 += 1
-                if TheNewWeekResult_7[SEVEN[j] - 1][1] == '单':
-                    danshu_7 += 1
-                if TheNewWeekResult_8[SEVEN[j] - 1][0] == '大':
-                    big_8 += 1
-                if TheNewWeekResult_8[SEVEN[j] - 1][1] == '单':
-                    danshu_8 += 1
-                if TheNewWeekResult_9[SEVEN[j] - 1][0] == '大':
-                    big_9 += 1
-                if TheNewWeekResult_9[SEVEN[j] - 1][1] == '单':
-                    danshu_9 += 1
-                if TheNewWeekResult_10[SEVEN[j] - 1][0] == '大':
-                    big_10 += 1
-                if TheNewWeekResult_10[SEVEN[j] - 1][1] == '单':
-                    danshu_10 += 1
-            yuzhi = 4
-            if big_1 < yuzhi:
-                big_1 = color_blue(big_1)
-            else:
-                big_1 = color_red(big_1)
-            if big_2 < yuzhi:
-                big_2 = color_blue(big_2)
-            else:
-                big_2 = color_red(big_2)
-            if big_3 < yuzhi:
-                big_3 = color_blue(big_3)
-            else:
-                big_3 = color_red(big_3)
-            if big_4 < yuzhi:
-                big_4 = color_blue(big_4)
-            else:
-                big_4 = color_red(big_4)
-            if big_5 < yuzhi:
-                big_5 = color_blue(big_5)
-            else:
-                big_5 = color_red(big_5)
-            if big_6 < yuzhi:
-                big_6 = color_blue(big_6)
-            else:
-                big_6 = color_red(big_6)
-            if big_7 < yuzhi:
-                big_7 = color_blue(big_7)
-            else:
-                big_7 = color_red(big_7)
-            if big_8 < yuzhi:
-                big_8 = color_blue(big_8)
-            else:
-                big_8 = color_red(big_8 )
-            if big_9 < yuzhi:
-                big_9 = color_blue(big_9)
-            else:
-                big_9 = color_red(big_9)
-            if big_10 < yuzhi:
-                big_10 = color_blue(big_10)
-            else:
-                big_10 = color_red(big_10)
-            if danshu_1 < yuzhi:
-                danshu_1 = color_blue(danshu_1)
-            else:
-                danshu_1 = color_red(danshu_1)
-            if danshu_2 < yuzhi:
-                danshu_2 = color_blue(danshu_2)
-            else:
-                danshu_2 = color_red(danshu_2)
-            if danshu_3 < yuzhi:
-                danshu_3 = color_blue(danshu_3)
-            else:
-                danshu_3 = color_red(danshu_3)
-            if danshu_4 < yuzhi:
-                danshu_4 = color_blue(danshu_4)
-            else:
-                danshu_4 = color_red(danshu_4)
-            if danshu_5 < yuzhi:
-                danshu_5 = color_blue(danshu_5)
-            else:
-                danshu_5 = color_red(danshu_5)
-            if danshu_6 < yuzhi:
-                danshu_6 = color_blue(danshu_6)
-            else:
-                danshu_6 = color_red(danshu_6)
-            if danshu_7 < yuzhi:
-                danshu_7 = color_blue(danshu_7)
-            else:
-                danshu_7 = color_red(danshu_7)
-            if danshu_8 < yuzhi:
-                danshu_8 = color_blue(danshu_8)
-            else:
-                danshu_8 = color_red(danshu_8)
-            if danshu_9 < yuzhi:
-                danshu_9 = color_blue(danshu_9)
-            else:
-                danshu_9 = color_red(danshu_9)
-            if danshu_10 < yuzhi:
-                danshu_10 = color_blue(danshu_10)
-            else:
-                danshu_10 = color_red(danshu_10)
-            table.add_column('七' + name, [big_1 + ' | ' + danshu_1, big_2 + ' | ' + danshu_2, big_3 + ' | ' + danshu_3, big_4 + ' | ' + danshu_4, big_5 + ' | ' + danshu_5, big_6 + ' | ' + danshu_6, big_7 + ' | ' + danshu_7, big_8 + ' | ' + danshu_8, big_9 + ' | ' + danshu_9, big_10 + ' | ' + danshu_10])
+                name = '单'
+                list_ = danshu_either
+            for j in range(6):
+                table_2.add_column(name + str(j + 1), list_[j])
         while True:
             if Time == 0:
                 Time = 599
+
             print(str(Time // 60) + ':' + str(Time - (Time // 60 * 60)))
             print(table)
+            print(table_2)
             time.sleep(1)
             Time = Time - 1
             os.system('cls')
