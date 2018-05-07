@@ -113,6 +113,8 @@ def main():
         Time = Time - 12
         result_3 = [[], [], [], [], [], [], [], [], [], []]
         result_4 = [[], [], [], [], [], [], [], [], [], []]
+        big_add = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        danshu_add = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for i in range(1, 7):
             big = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             danshu = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -137,6 +139,8 @@ def main():
                     if TheNewWeekResult[k][THREE[j] - 1][1] == '单':
                         danshu[k] += 1
             for x in range(10):
+                big_add[x] += big[x]
+                danshu_add[x] += danshu[x]
                 if big[x] < 2:
                     big[x] = color_blue(big[x])
                 else:
@@ -149,11 +153,24 @@ def main():
                 result_4[i - 1].append(danshu[x])
         for i in range(1, 7):
             table.add_column('大' + str(i), result_3[i - 1])
+        for i in range(10):
+            if big_add[i] < 10:
+                big_add[i] = color_blue(big_add[i])
+            else:
+                big_add[i] = color_red(big_add[i])
+            if danshu_add[i] < 10:
+                danshu_add[i] = color_blue(danshu_add[i])
+            else:
+                danshu_add[i] = color_red(danshu_add[i])
+        table.add_column('和', big_add)
         for i in range(1, 7):
             table.add_column('单' + str(i), result_4[i - 1])
+        table.add_column('和', danshu_add)
         table_2 = PrettyTable()
         big_either = []
+        big_either_add = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         danshu_either = []
+        danshu_either_add = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         for i in range(6):
             for j in range(2):
                 either = [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -161,6 +178,10 @@ def main():
                     for x in range(3):
                         if noColor_TheNewWeekResult[k][i + x][j] != noColor_TheNewWeekResult[k + 1][i + x][j]:
                             either[k] += 1
+                    if j == 0:
+                        big_either_add[k] += either[k]
+                    else:
+                        danshu_either_add[k] += either[k]
                     if either[k] < 2:
                         either[k] = color_blue(either[k])
                     else:
@@ -169,6 +190,15 @@ def main():
                     big_either.append(either)
                 else:
                     danshu_either.append(either)
+        for i in range(9):
+            if big_either_add[i] < 10:
+                big_either_add[i] = color_blue(big_either_add[i])
+            else:
+                big_either_add[i] = color_red(big_either_add[i])
+            if danshu_either_add[i] < 10:
+                danshu_either_add[i] = color_blue(danshu_either_add[i])
+            else:
+                danshu_either_add[i] = color_red(danshu_either_add[i])
         for i in range(2):
             if i == 0:
                 name = '大'
@@ -178,10 +208,13 @@ def main():
                 list_ = danshu_either
             for j in range(6):
                 table_2.add_column(name + str(j + 1), list_[j])
+            if i == 0:
+                table_2.add_column('和', big_either_add)
+            else:
+                table_2.add_column('和', danshu_either_add)
         while True:
             if Time == 0:
                 Time = 599
-
             print(str(Time // 60) + ':' + str(Time - (Time // 60 * 60)))
             print(table)
             print(table_2)
