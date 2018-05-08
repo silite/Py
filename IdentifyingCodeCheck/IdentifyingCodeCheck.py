@@ -5,14 +5,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import ActionChains
-DEBUG = False
+DEBUG = True
 if not DEBUG:
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
     driver.get("https://www.bilibili.com")
     move_btn_xpath = '//*[@id="gc-box"]/div/div[3]/div[2]'
 cropped_im_size = (500, 235)
-either_threshold = 70
+either_threshold = 100
 jump_threshold = 180
 
 def LogIn():
@@ -57,11 +57,12 @@ def GetDistance(RGBList_1, RGBList_2):
                 if either >= either_threshold:
                     if len(conform) != 0 and iter_width - conform[-1] < jump_threshold:
                         continue
-                    print(iter_width - either_threshold + 27)
-                    conform.append(iter_width - either_threshold + 27)
+                    conform.append(iter_width - either_threshold)
+                    either = 0
             else:
                 either = 0
-    return conform[0] + 112
+    print(conform)
+    return conform[0] + 120
 
 def GetTrack(distance):
     v0 = 0
@@ -87,7 +88,6 @@ def main():
         RGBList_1 = Image.open('./cropped1.png').getdata()
         RGBList_2 = Image.open('./cropped2.png').getdata()
         distance = GetDistance(RGBList_1, RGBList_2)
-        print(distance)
     else:
         LogIn()
         while True:
