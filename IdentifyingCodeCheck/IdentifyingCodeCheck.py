@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import ActionChains
-DEBUG = True
+DEBUG = False
 if not DEBUG:
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
@@ -49,7 +49,6 @@ def GetDistance(RGBList_1, RGBList_2):
     conform = []
     for iter_height in range(cropped_im_size[1]):
         either = 0
-
         for iter_width in range(cropped_im_size[0] - 100):
             NOW_RGB_1 = RGBList_1[iter_height * cropped_im_size[0] + iter_width]
             NOW_RGB_2 = RGBList_2[iter_height * cropped_im_size[0] + iter_width]
@@ -60,12 +59,18 @@ def GetDistance(RGBList_1, RGBList_2):
                     if len(conform) != 0 and iter_width - conform[-1] < jump_threshold:
                         continue
                     point_width = iter_width - either_threshold
-                    for iter_height_two in range(1, 40):
-                        NOW_RGB_1 = RGBList_1[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
-                        NOW_RGB_2 = RGBList_2[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
+                    for iter_width_two in range(either_threshold):
+                        NOW_RGB_1 = RGBList_1[(iter_height + 20) * cropped_im_size[0] + iter_width_two + point_width]
+                        NOW_RGB_2 = RGBList_2[(iter_height + 20) * cropped_im_size[0] + iter_width_two + point_width]
                         if NOW_RGB_1 == NOW_RGB_2:
                             either_two = False
-                            break
+                    if either_two:
+                        for iter_height_two in range(1, 40):
+                            NOW_RGB_1 = RGBList_1[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
+                            NOW_RGB_2 = RGBList_2[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
+                            if NOW_RGB_1 == NOW_RGB_2:
+                                either_two = False
+                                break
                     if either_two:
                         conform.append(point_width)
                         either = 0
