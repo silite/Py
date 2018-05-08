@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import ActionChains
-DEBUG = False
+DEBUG = True
 if not DEBUG:
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
@@ -13,7 +13,7 @@ if not DEBUG:
     move_btn_xpath = '//*[@id="gc-box"]/div/div[3]/div[2]'
 cropped_im_size = (500, 235)
 either_threshold = 100
-jump_threshold = 180
+jump_threshold = 120
 
 def LogIn():
     login_btn = wait.until(
@@ -55,23 +55,24 @@ def GetDistance(RGBList_1, RGBList_2):
             if NOW_RGB_1 != NOW_RGB_2:
                 either += 1
                 if either >= either_threshold:
-                    either_two = True
                     if len(conform) != 0 and iter_width - conform[-1] < jump_threshold:
                         continue
                     point_width = iter_width - either_threshold
-                    for iter_width_two in range(either_threshold):
-                        NOW_RGB_1 = RGBList_1[(iter_height + 20) * cropped_im_size[0] + iter_width_two + point_width]
-                        NOW_RGB_2 = RGBList_2[(iter_height + 20) * cropped_im_size[0] + iter_width_two + point_width]
+                    error_threshold = 0
+                    for iter_height_two in range(1, 40):
+                        NOW_RGB_1 = RGBList_1[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
+                        NOW_RGB_2 = RGBList_2[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
                         if NOW_RGB_1 == NOW_RGB_2:
-                            either_two = False
-                    if either_two:
-                        for iter_height_two in range(1, 40):
-                            NOW_RGB_1 = RGBList_1[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
-                            NOW_RGB_2 = RGBList_2[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
-                            if NOW_RGB_1 == NOW_RGB_2:
-                                either_two = False
-                                break
-                    if either_two:
+                            error_threshold += 1
+                    if error_threshold < 5:
+                        error_threshold = 0
+                        for iter_width_two in range(either_threshold):
+                            for son_height in range(1, 20):
+                                NOW_RGB_1 = RGBList_1[(iter_height + son_height) * cropped_im_size[0] + iter_width_two + point_width]
+                                NOW_RGB_2 = RGBList_2[(iter_height + son_height) * cropped_im_size[0] + iter_width_two + point_width]
+                                if NOW_RGB_1 == NOW_RGB_2:
+                                    error_threshold += 1
+                    if error_threshold < 5:
                         conform.append(point_width)
                         either = 0
             else:
