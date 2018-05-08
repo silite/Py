@@ -49,20 +49,30 @@ def GetDistance(RGBList_1, RGBList_2):
     conform = []
     for iter_height in range(cropped_im_size[1]):
         either = 0
+
         for iter_width in range(cropped_im_size[0] - 100):
             NOW_RGB_1 = RGBList_1[iter_height * cropped_im_size[0] + iter_width]
             NOW_RGB_2 = RGBList_2[iter_height * cropped_im_size[0] + iter_width]
             if NOW_RGB_1 != NOW_RGB_2:
                 either += 1
                 if either >= either_threshold:
+                    either_two = True
                     if len(conform) != 0 and iter_width - conform[-1] < jump_threshold:
                         continue
-                    conform.append(iter_width - either_threshold)
-                    either = 0
+                    point_width = iter_width - either_threshold
+                    for iter_height_two in range(1, 40):
+                        NOW_RGB_1 = RGBList_1[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
+                        NOW_RGB_2 = RGBList_2[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
+                        if NOW_RGB_1 == NOW_RGB_2:
+                            either_two = False
+                            break
+                    if either_two:
+                        conform.append(point_width)
+                        either = 0
             else:
                 either = 0
     print(conform)
-    return conform[0] + 120
+    return conform[0] + 135
 
 def GetTrack(distance):
     v0 = 0
