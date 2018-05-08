@@ -5,11 +5,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import ActionChains
-driver = webdriver.Chrome()
-wait = WebDriverWait(driver, 10)
-driver.get("https://www.bilibili.com")
-move_btn_xpath = '//*[@id="gc-box"]/div/div[3]/div[2]'
-cropped_im_size = (650, 235)
+DEBUG = False
+if not DEBUG:
+    driver = webdriver.Chrome()
+    wait = WebDriverWait(driver, 10)
+    driver.get("https://www.bilibili.com")
+    move_btn_xpath = '//*[@id="gc-box"]/div/div[3]/div[2]'
+cropped_im_size = (500, 235)
+either_threshold = 70
+jump_threshold = 180
 
 def LogIn():
     login_btn = wait.until(
@@ -26,21 +30,38 @@ def MoveElement(track):
     time.sleep(0.5)
     ActionChains(driver).release().perform()
 def ImageCrop():
-    driver.find_element_by_xpath(move_btn_xpath).click()
+    hold = wait.until(
+        EC.presence_of_element_located((By.XPATH, '//*[@id="gc-box"]/div/div[3]/div[1]'))
+    )
+    hold.click()
     time.sleep(1)
     driver.save_screenshot('screenshot.png')
     im = Image.open('./screenshot.png')
-    im_crop = im.crop((1388, 560, 2038, 795))
-    im_crop.save('./cropped.png')
-    return im_crop.getdata()
-def GetDistance(RGBList):
+    im_crop = im.crop((1538, 560, 2038, 795))
+    im_crop.save('./cropped1.png')
+    driver.find_element_by_xpath(move_btn_xpath).click()
+    time.sleep(0.5)
+    driver.save_screenshot('screenshot.png')
+    im = Image.open('./screenshot.png')
+    im_crop = im.crop((1538, 560, 2038, 795))
+    im_crop.save('./cropped2.png')
+def GetDistance(RGBList_1, RGBList_2):
+    conform = []
     for iter_height in range(cropped_im_size[1]):
-        for iter_width in range(cropped_im_size[0] - 110):
-            NOW_RGB = RGBList[iter_height * cropped_im_size[0] + iter_width]
-            NEXT_RGB = RGBList[iter_height * cropped_im_size[0] + iter_width + 1]
-            if NOW_RGB[0] - NEXT_RGB[0] > 60:
-                return iter_width
-    return 0
+        either = 0
+        for iter_width in range(cropped_im_size[0] - 100):
+            NOW_RGB_1 = RGBList_1[iter_height * cropped_im_size[0] + iter_width]
+            NOW_RGB_2 = RGBList_2[iter_height * cropped_im_size[0] + iter_width]
+            if NOW_RGB_1 != NOW_RGB_2:
+                either += 1
+                if either >= either_threshold:
+                    if len(conform) != 0 and iter_width - conform[-1] < jump_threshold:
+                        continue
+                    print(iter_width - either_threshold + 27)
+                    conform.append(iter_width - either_threshold + 27)
+            else:
+                either = 0
+    return conform[0] + 112
 
 def GetTrack(distance):
     v0 = 0
@@ -62,12 +83,21 @@ def GetTrack(distance):
         track.append(round(x))
     return track
 def main():
-    LogIn()
-    RGBList = ImageCrop()
-    distance = GetDistance(RGBList)
-    track = GetTrack(distance)
-    MoveElement(track)
-    time.sleep(2)
-    driver.quit()
+    if DEBUG:
+        RGBList_1 = Image.open('./cropped1.png').getdata()
+        RGBList_2 = Image.open('./cropped2.png').getdata()
+        distance = GetDistance(RGBList_1, RGBList_2)
+        print(distance)
+    else:
+        LogIn()
+        while True:
+            ImageCrop()
+            RGBList_1 = Image.open('./cropped1.png').getdata()
+            RGBList_2 = Image.open('./cropped2.png').getdata()
+            distance = GetDistance(RGBList_1, RGBList_2)
+            distance = round(distance / 490 * 200)
+            track = GetTrack(distance)
+            MoveElement(track)
+            time.sleep(2)
 if __name__ == "__main__":
     main()
