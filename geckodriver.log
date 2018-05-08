@@ -314,4 +314,25 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 [Parent 5724, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 [Child 26808, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 [Child 26808, Chrome_ChildThread] WARNING: pipe error: 109[Parent 5724, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[C
+[C1525667738455	geckodriver	INFO	geckodriver 0.19.1
+1525667738470	geckodriver	INFO	Listening on 127.0.0.1:4192
+1525667741580	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.wBqivugcTOZP"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525667742850	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525667744294	Marionette	INFO	Listening on port 4200
+1525667744758	Marionette	WARN	TLS certificate errors will be ignored for this session
+1525668268714	geckodriver	INFO	geckodriver 0.19.1
+1525668268730	geckodriver	INFO	Listening on 127.0.0.1:6017
+1525668271793	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.1q9rHZ8x0auk"
+*** You are running in headless mode.
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525668272282	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1525668273590	Marionette	INFO	Listening on port 6025
+1525668273830	Marionette	WARN	TLS certificate errors will be ignored for this session
