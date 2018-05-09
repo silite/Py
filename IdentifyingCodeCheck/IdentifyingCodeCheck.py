@@ -5,15 +5,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import ActionChains
-DEBUG = True
+DEBUG = False
 if not DEBUG:
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
     driver.get("https://www.bilibili.com")
     move_btn_xpath = '//*[@id="gc-box"]/div/div[3]/div[2]'
 cropped_im_size = (500, 235)
-either_threshold = 100
-jump_threshold = 120
+either_threshold = 80
 
 def LogIn():
     login_btn = wait.until(
@@ -46,40 +45,23 @@ def ImageCrop():
     im_crop = im.crop((1538, 560, 2038, 795))
     im_crop.save('./cropped2.png')
 def GetDistance(RGBList_1, RGBList_2):
-    conform = []
+    threshold = 20
     for iter_height in range(cropped_im_size[1]):
-        either = 0
         for iter_width in range(cropped_im_size[0] - 100):
             NOW_RGB_1 = RGBList_1[iter_height * cropped_im_size[0] + iter_width]
             NOW_RGB_2 = RGBList_2[iter_height * cropped_im_size[0] + iter_width]
             if NOW_RGB_1 != NOW_RGB_2:
-                either += 1
-                if either >= either_threshold:
-                    if len(conform) != 0 and iter_width - conform[-1] < jump_threshold:
-                        continue
-                    point_width = iter_width - either_threshold
-                    error_threshold = 0
-                    for iter_height_two in range(1, 40):
-                        NOW_RGB_1 = RGBList_1[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
-                        NOW_RGB_2 = RGBList_2[(iter_height + iter_height_two) * cropped_im_size[0] + point_width]
-                        if NOW_RGB_1 == NOW_RGB_2:
-                            error_threshold += 1
-                    if error_threshold < 5:
-                        error_threshold = 0
-                        for iter_width_two in range(either_threshold):
-                            for son_height in range(1, 20):
-                                NOW_RGB_1 = RGBList_1[(iter_height + son_height) * cropped_im_size[0] + iter_width_two + point_width]
-                                NOW_RGB_2 = RGBList_2[(iter_height + son_height) * cropped_im_size[0] + iter_width_two + point_width]
-                                if NOW_RGB_1 == NOW_RGB_2:
-                                    error_threshold += 1
-                    if error_threshold < 5:
-                        conform.append(point_width)
-                        either = 0
-            else:
-                either = 0
-    print(conform)
-    return conform[0] + 135
-
+                error_threshold = 0
+                for either_width in range(either_threshold):
+                    NOW_RGB_1 = RGBList_1[iter_height * cropped_im_size[0] + iter_width + either_width]
+                    NOW_RGB_2 = RGBList_2[iter_height * cropped_im_size[0] + iter_width + either_width]
+                    if abs(NOW_RGB_1[0] - NOW_RGB_2[0]) < threshold and abs(NOW_RGB_1[1] - NOW_RGB_2[1]) < threshold and abs(NOW_RGB_1[2] - NOW_RGB_2[2]) < threshold:
+                        error_threshold += 1
+                        if error_threshold == 5:
+                            break
+                if error_threshold < 5:
+                    print(iter_width)
+                    return iter_width + 132
 def GetTrack(distance):
     v0 = 0
     t = 0.2
