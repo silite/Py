@@ -45,7 +45,7 @@ def ImageCrop():
     im_crop = im.crop((1538, 560, 2038, 795))
     im_crop.save('./cropped2.png')
 def GetDistance(RGBList_1, RGBList_2):
-    threshold = 20
+    threshold = 18
     for iter_height in range(cropped_im_size[1]):
         for iter_width in range(cropped_im_size[0] - 100):
             NOW_RGB_1 = RGBList_1[iter_height * cropped_im_size[0] + iter_width]
@@ -60,8 +60,8 @@ def GetDistance(RGBList_1, RGBList_2):
                         if error_threshold == 5:
                             break
                 if error_threshold < 5:
-                    print(iter_width)
-                    return iter_width + 132
+                    print(iter_width, iter_height)
+                    return iter_width + 135
 def GetTrack(distance):
     v0 = 0
     t = 0.2
