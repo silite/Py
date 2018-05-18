@@ -1,0 +1,311 @@
+1526225660290	geckodriver	INFO	geckodriver 0.19.1
+1526225660292	geckodriver	INFO	Listening on 127.0.0.1:6512
+1526225663417	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.CvkXBbVhzEYV"
+*** You are running in headless mode.
+1526225663890	addons.manager	DEBUG	Application has been upgraded
+1526225663930	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider", "XPIInternal"]
+1526225663932	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1526225663954	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1526225663956	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1526225663956	addons.manager	DEBUG	Starting provider: XPIProvider
+1526225663956	addons.xpi	DEBUG	startup
+1526225663956	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1526225663956	addons.xpi	INFO	Removing all system add-on upgrades.
+1526225663958	addons.xpi	DEBUG	checkForChanges
+1526225663958	addons.xpi	DEBUG	Loaded add-on state: ${}
+1526225663958	addons.xpi	INFO	Mapping activity-stream@mozilla.org to D:\Program Files\fireFox\browser\features\activity-stream@mozilla.org.xpi
+1526225663958	addons.xpi	INFO	Mapping aushelper@mozilla.org to D:\Program Files\fireFox\browser\features\aushelper@mozilla.org.xpi
+1526225663958	addons.xpi	INFO	Mapping firefox@getpocket.com to D:\Program Files\fireFox\browser\features\firefox@getpocket.com.xpi
+1526225663958	addons.xpi	INFO	Mapping followonsearch@mozilla.com to D:\Program Files\fireFox\browser\features\followonsearch@mozilla.com.xpi
+1526225663958	addons.xpi	INFO	Mapping formautofill@mozilla.org to D:\Program Files\fireFox\browser\features\formautofill@mozilla.org.xpi
+1526225663958	addons.xpi	INFO	Mapping onboarding@mozilla.org to D:\Program Files\fireFox\browser\features\onboarding@mozilla.org.xpi
+1526225663958	addons.xpi	INFO	Mapping screenshots@mozilla.org to D:\Program Files\fireFox\browser\features\screenshots@mozilla.org.xpi
+1526225663958	addons.xpi	INFO	Mapping shield-recipe-client@mozilla.org to D:\Program Files\fireFox\browser\features\shield-recipe-client@mozilla.org.xpi
+1526225663958	addons.xpi	INFO	Mapping webcompat@mozilla.org to D:\Program Files\fireFox\browser\features\webcompat@mozilla.org.xpi
+1526225663960	addons.xpi	DEBUG	New add-on activity-stream@mozilla.org in app-system-defaults
+1526225663960	addons.xpi	DEBUG	New add-on aushelper@mozilla.org in app-system-defaults
+1526225663962	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1526225663962	addons.xpi	DEBUG	New add-on followonsearch@mozilla.com in app-system-defaults
+1526225663962	addons.xpi	DEBUG	New add-on formautofill@mozilla.org in app-system-defaults
+1526225663964	addons.xpi	DEBUG	New add-on onboarding@mozilla.org in app-system-defaults
+1526225663964	addons.xpi	DEBUG	New add-on screenshots@mozilla.org in app-system-defaults
+1526225663964	addons.xpi	DEBUG	New add-on shield-recipe-client@mozilla.org in app-system-defaults
+1526225663964	addons.xpi	DEBUG	New add-on webcompat@mozilla.org in app-system-defaults
+1526225663966	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to D:\Program Files\fireFox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1526225663966	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1526225663966	addons.xpi	DEBUG	getInstallState changed: true, state: {}
+1526225663966	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1526225663972	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\dell\AppData\Local\Temp\rust_mozprofile.CvkXBbVhzEYV\extensions.json
+1526225663972	addons.xpi-utils	DEBUG	New add-on activity-stream@mozilla.org installed in app-system-defaults
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1526225664316	addons.xpi-utils	DEBUG	New add-on aushelper@mozilla.org installed in app-system-defaults
+1526225664326	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+1526225664362	addons.xpi-utils	DEBUG	New add-on followonsearch@mozilla.com installed in app-system-defaults
+1526225664374	addons.xpi-utils	DEBUG	New add-on formautofill@mozilla.org installed in app-system-defaults
+1526225664408	addons.xpi-utils	DEBUG	New add-on onboarding@mozilla.org installed in app-system-defaults
+1526225664426	addons.xpi-utils	DEBUG	New add-on screenshots@mozilla.org installed in app-system-defaults
+1526225664438	addons.xpi-utils	DEBUG	New add-on shield-recipe-client@mozilla.org installed in app-system-defaults
+1526225664456	addons.xpi-utils	DEBUG	New add-on webcompat@mozilla.org installed in app-system-defaults
+1526225664464	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1526225664472	addons.manager	DEBUG	Registering startup change 'installed' for activity-stream@mozilla.org
+1526225664478	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\activity-stream@mozilla.org.xpi
+1526225664480	addons.xpi	DEBUG	Calling bootstrap method install on activity-stream@mozilla.org version 2018.02.17.0026-173e2795
+1526225664480	addons.xpi-utils	DEBUG	Make addon app-system-defaults:activity-stream@mozilla.org visible
+1526225664480	addons.xpi	DEBUG	Updating XPIState for {"id":"activity-stream@mozilla.org","syncGUID":"{26626c37-3ab5-417f-a2d1-559ba68e1ddc}","location":"app-system-defaults","version":"2018.02.17.0026-173e2795","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Activity Stream","description":"A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Firefox.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438225471,"updateDate":1525438225471,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\activity-stream@mozilla.org.xpi","skinnable":false,"size":2766943,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664482	addons.manager	DEBUG	Registering startup change 'installed' for aushelper@mozilla.org
+1526225664482	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\aushelper@mozilla.org.xpi
+1526225664484	addons.xpi	DEBUG	Calling bootstrap method install on aushelper@mozilla.org version 2.0
+1526225664484	addons.xpi-utils	DEBUG	Make addon app-system-defaults:aushelper@mozilla.org visible
+1526225664484	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{f1f78584-8854-4bbb-aaa0-e713cfe2b56d}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438225081,"updateDate":1525438225081,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\aushelper@mozilla.org.xpi","skinnable":false,"size":8488,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664484	addons.manager	DEBUG	Registering startup change 'installed' for firefox@getpocket.com
+1526225664484	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\firefox@getpocket.com.xpi
+1526225664488	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.5
+1526225664488	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1526225664488	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{eee84d0b-c773-4ad5-b929-3121a999e1e4}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438225081,"updateDate":1525438225081,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\firefox@getpocket.com.xpi","skinnable":false,"size":916335,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664488	addons.manager	DEBUG	Registering startup change 'installed' for followonsearch@mozilla.com
+1526225664488	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\followonsearch@mozilla.com.xpi
+1526225664490	addons.xpi	DEBUG	Calling bootstrap method install on followonsearch@mozilla.com version 0.9.6
+1526225664490	addons.xpi-utils	DEBUG	Make addon app-system-defaults:followonsearch@mozilla.com visible
+1526225664490	addons.xpi	DEBUG	Updating XPIState for {"id":"followonsearch@mozilla.com","syncGUID":"{4ff2853a-98a3-4b77-95fd-d803de9f59b8}","location":"app-system-defaults","version":"0.9.6","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Follow-on Search Telemetry","description":null,"creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438225002,"updateDate":1525438225002,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\followonsearch@mozilla.com.xpi","skinnable":false,"size":18625,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0","maxVersion":"66.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664490	addons.manager	DEBUG	Registering startup change 'installed' for formautofill@mozilla.org
+1526225664490	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\formautofill@mozilla.org.xpi
+1526225664492	addons.xpi	DEBUG	Calling bootstrap method install on formautofill@mozilla.org version 1.0
+1526225664492	addons.xpi-utils	DEBUG	Make addon app-system-defaults:formautofill@mozilla.org visible
+1526225664492	addons.xpi	DEBUG	Updating XPIState for {"id":"formautofill@mozilla.org","syncGUID":"{bd886519-1913-4e2b-b615-7875b8a9dfd0}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Form Autofill","description":"Autofill forms with saved profiles","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438224987,"updateDate":1525438224987,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\formautofill@mozilla.org.xpi","skinnable":false,"size":458018,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664492	addons.manager	DEBUG	Registering startup change 'installed' for onboarding@mozilla.org
+1526225664492	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\onboarding@mozilla.org.xpi
+1526225664494	addons.xpi	DEBUG	Calling bootstrap method install on onboarding@mozilla.org version 1.0
+1526225664494	addons.xpi-utils	DEBUG	Make addon app-system-defaults:onboarding@mozilla.org visible
+1526225664494	addons.xpi	DEBUG	Updating XPIState for {"id":"onboarding@mozilla.org","syncGUID":"{90b5b33a-1166-40a3-acf0-69d3a530b112}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Photon onboarding","description":"Photon onboarding","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438224940,"updateDate":1525438224940,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\onboarding@mozilla.org.xpi","skinnable":false,"size":566876,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664494	addons.manager	DEBUG	Registering startup change 'installed' for screenshots@mozilla.org
+1526225664494	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\screenshots@mozilla.org.xpi
+1526225664496	addons.xpi	DEBUG	Calling bootstrap method install on screenshots@mozilla.org version 25.0.0
+1526225664496	addons.xpi-utils	DEBUG	Make addon app-system-defaults:screenshots@mozilla.org visible
+1526225664496	addons.xpi	DEBUG	Updating XPIState for {"id":"screenshots@mozilla.org","syncGUID":"{40c5b3db-07d3-4c32-af91-0e82a7cfe7f8}","location":"app-system-defaults","version":"25.0.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Firefox Screenshots","description":null,"creator":null,"homepageURL":"https://screenshots.firefox.com/"},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438224909,"updateDate":1525438224909,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\screenshots@mozilla.org.xpi","skinnable":false,"size":994512,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"57.0a1","maxVersion":"*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664496	addons.manager	DEBUG	Registering startup change 'installed' for shield-recipe-client@mozilla.org
+1526225664496	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\shield-recipe-client@mozilla.org.xpi
+1526225664498	addons.xpi	DEBUG	Calling bootstrap method install on shield-recipe-client@mozilla.org version 80
+1526225664498	addons.xpi-utils	DEBUG	Make addon app-system-defaults:shield-recipe-client@mozilla.org visible
+1526225664498	addons.xpi	DEBUG	Updating XPIState for {"id":"shield-recipe-client@mozilla.org","syncGUID":"{9a9c72ca-6003-4cfc-b60a-aa785380602e}","location":"app-system-defaults","version":"80","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Shield Recipe Client","description":"Client to download and run recipes for SHIELD, Heartbeat, etc.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438224877,"updateDate":1525438224877,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\shield-recipe-client@mozilla.org.xpi","skinnable":false,"size":365969,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664498	addons.manager	DEBUG	Registering startup change 'installed' for webcompat@mozilla.org
+1526225664498	addons.xpi	DEBUG	Loading bootstrap scope from D:\Program Files\fireFox\browser\features\webcompat@mozilla.org.xpi
+1526225664500	addons.xpi	DEBUG	Calling bootstrap method install on webcompat@mozilla.org version 1.1
+1526225664500	addons.xpi-utils	DEBUG	Make addon app-system-defaults:webcompat@mozilla.org visible
+1526225664500	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{4a951886-c0b3-4983-8e60-9aac2d0eb81e}","location":"app-system-defaults","version":"1.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438224846,"updateDate":1525438224846,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\webcompat@mozilla.org.xpi","skinnable":false,"size":9268,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664500	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1526225664500	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{aaf0e5f4-2381-4198-a82c-df53b4c5fe9e}","location":"app-global","version":"59.0.3","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"optionsBrowserStyle":null,"aboutURL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1525438225471,"updateDate":1525438225471,"applyBackgroundUpdates":1,"path":"D:\\Program Files\\fireFox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","skinnable":true,"size":3016,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.0.3"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"userPermissions":null,"icons":{},"iconURL":"chrome://browser/content/default-theme-icon.svg","icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664500	addons.xpi	DEBUG	Updating XPIState for {"id":"activity-stream@mozilla.org","syncGUID":"{26626c37-3ab5-417f-a2d1-559ba68e1ddc}","location":"app-system-defaults","version":"2018.02.17.0026-173e2795","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Activity Stream","description":"A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Firefox.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438225471,"updateDate":1525438225471,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\activity-stream@mozilla.org.xpi","skinnable":false,"size":2766943,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664500	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{f1f78584-8854-4bbb-aaa0-e713cfe2b56d}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438225081,"updateDate":1525438225081,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\aushelper@mozilla.org.xpi","skinnable":false,"size":8488,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664500	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{eee84d0b-c773-4ad5-b929-3121a999e1e4}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438225081,"updateDate":1525438225081,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\firefox@getpocket.com.xpi","skinnable":false,"size":916335,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664500	addons.xpi	DEBUG	Updating XPIState for {"id":"followonsearch@mozilla.com","syncGUID":"{4ff2853a-98a3-4b77-95fd-d803de9f59b8}","location":"app-system-defaults","version":"0.9.6","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Follow-on Search Telemetry","description":null,"creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438225002,"updateDate":1525438225002,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\followonsearch@mozilla.com.xpi","skinnable":false,"size":18625,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0","maxVersion":"66.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating XPIState for {"id":"formautofill@mozilla.org","syncGUID":"{bd886519-1913-4e2b-b615-7875b8a9dfd0}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Form Autofill","description":"Autofill forms with saved profiles","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438224987,"updateDate":1525438224987,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\formautofill@mozilla.org.xpi","skinnable":false,"size":458018,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating XPIState for {"id":"onboarding@mozilla.org","syncGUID":"{90b5b33a-1166-40a3-acf0-69d3a530b112}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Photon onboarding","description":"Photon onboarding","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438224940,"updateDate":1525438224940,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\onboarding@mozilla.org.xpi","skinnable":false,"size":566876,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating XPIState for {"id":"screenshots@mozilla.org","syncGUID":"{40c5b3db-07d3-4c32-af91-0e82a7cfe7f8}","location":"app-system-defaults","version":"25.0.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Firefox Screenshots","description":null,"creator":null,"homepageURL":"https://screenshots.firefox.com/"},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438224909,"updateDate":1525438224909,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\screenshots@mozilla.org.xpi","skinnable":false,"size":994512,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"57.0a1","maxVersion":"*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating XPIState for {"id":"shield-recipe-client@mozilla.org","syncGUID":"{9a9c72ca-6003-4cfc-b60a-aa785380602e}","location":"app-system-defaults","version":"80","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Shield Recipe Client","description":"Client to download and run recipes for SHIELD, Heartbeat, etc.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438224877,"updateDate":1525438224877,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\shield-recipe-client@mozilla.org.xpi","skinnable":false,"size":365969,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{4a951886-c0b3-4983-8e60-9aac2d0eb81e}","location":"app-system-defaults","version":"1.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438224846,"updateDate":1525438224846,"applyBackgroundUpdates":1,"bootstrap":true,"path":"D:\\Program Files\\fireFox\\browser\\features\\webcompat@mozilla.org.xpi","skinnable":false,"size":9268,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{aaf0e5f4-2381-4198-a82c-df53b4c5fe9e}","location":"app-global","version":"59.0.3","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"optionsBrowserStyle":null,"aboutURL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1525438225471,"updateDate":1525438225471,"applyBackgroundUpdates":1,"path":"D:\\Program Files\\fireFox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","skinnable":true,"size":3016,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"59.0.3","maxVersion":"59.0.3"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"userPermissions":null,"icons":{},"iconURL":"chrome://browser/content/default-theme-icon.svg","icon64URL":null,"blocklistState":0,"blocklistURL":null,"startupData":null}
+1526225664502	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1526225664502	addons.xpi-utils	DEBUG	Updating add-on states
+1526225664504	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\activity-stream@mozilla.org.xpi
+1526225664506	addons.xpi	DEBUG	Calling bootstrap method startup on activity-stream@mozilla.org version 2018.02.17.0026-173e2795
+1526225664506	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\aushelper@mozilla.org.xpi
+1526225664506	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1526225664508	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\firefox@getpocket.com.xpi
+1526225664508	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1526225664514	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\followonsearch@mozilla.com.xpi
+1526225664516	addons.xpi	DEBUG	Calling bootstrap method startup on followonsearch@mozilla.com version 0.9.6
+1526225664516	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\formautofill@mozilla.org.xpi
+1526225664516	addons.xpi	DEBUG	Calling bootstrap method startup on formautofill@mozilla.org version 1.0
+1526225664516	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\onboarding@mozilla.org.xpi
+1526225664516	addons.xpi	DEBUG	Calling bootstrap method startup on onboarding@mozilla.org version 1.0
+1526225664516	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\screenshots@mozilla.org.xpi
+1526225664516	addons.xpi	DEBUG	Calling bootstrap method startup on screenshots@mozilla.org version 25.0.0
+1526225664518	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\shield-recipe-client@mozilla.org.xpi
+1526225664518	addons.xpi	DEBUG	Calling bootstrap method startup on shield-recipe-client@mozilla.org version 80
+1526225664522	addons.xpi	DEBUG	Registering manifest for D:\Program Files\fireFox\browser\features\webcompat@mozilla.org.xpi
+1526225664522	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.1
+1526225664524	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1526225664524	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1526225664524	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1526225664524	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1526225664524	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1526225664524	addons.manager	DEBUG	Starting provider: GMPProvider
+1526225664534	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1526225664534	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1526225664534	addons.manager	DEBUG	Starting provider: PluginProvider
+1526225664534	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1526225664534	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1526225664534	addons.manager	DEBUG	Completed startup sequence
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526225664680	Marionette	INFO	Enabled via --marionette
+1526225664798	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1526225664800	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1526225664800	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526225665768	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 24
+1526225666086	addons.xpi	INFO	Mapping activity-stream@mozilla.org to D:\Program Files\fireFox\browser\features\activity-stream@mozilla.org.xpi
+1526225666086	addons.xpi	INFO	Mapping aushelper@mozilla.org to D:\Program Files\fireFox\browser\features\aushelper@mozilla.org.xpi
+1526225666086	addons.xpi	INFO	Mapping firefox@getpocket.com to D:\Program Files\fireFox\browser\features\firefox@getpocket.com.xpi
+1526225666086	addons.xpi	INFO	Mapping followonsearch@mozilla.com to D:\Program Files\fireFox\browser\features\followonsearch@mozilla.com.xpi
+1526225666086	addons.xpi	INFO	Mapping formautofill@mozilla.org to D:\Program Files\fireFox\browser\features\formautofill@mozilla.org.xpi
+1526225666086	addons.xpi	INFO	Mapping onboarding@mozilla.org to D:\Program Files\fireFox\browser\features\onboarding@mozilla.org.xpi
+1526225666086	addons.xpi	INFO	Mapping screenshots@mozilla.org to D:\Program Files\fireFox\browser\features\screenshots@mozilla.org.xpi
+1526225666086	addons.xpi	INFO	Mapping shield-recipe-client@mozilla.org to D:\Program Files\fireFox\browser\features\shield-recipe-client@mozilla.org.xpi
+1526225666086	addons.xpi	INFO	Mapping webcompat@mozilla.org to D:\Program Files\fireFox\browser\features\webcompat@mozilla.org.xpi
+1526225666086	addons.xpi	DEBUG	Existing add-on activity-stream@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on aushelper@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on firefox@getpocket.com in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on followonsearch@mozilla.com in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+1526225666088	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to D:\Program Files\fireFox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1526225666090	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1526225666090	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526225666248	Marionette	INFO	Listening on port 6524
+1526225666586	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526565096623	geckodriver	INFO	geckodriver 0.19.1
+1526565096638	geckodriver	INFO	Listening on 127.0.0.1:1228
+1526565099732	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.K0EKycshrLd4"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526565100290	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526565102050	Marionette	INFO	Listening on port 1241
+1526565102844	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.yfcp828.com/static/js/manifest.5c8b6c6927e992a6349e.js, line 1: TypeError: e[n] is undefined
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=530098293, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=530098293, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=530098293 line 1 > eval, line 1: unreachable code after return statement
+[Parent 9248, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 9248, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10012, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10012, Chrome_ChildThread] WA[Child 14256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14256, Chrome_ChildThread] WAR[Parent 9248, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14068, Chrome_Ch*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 8980, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526565114787	geckodriver	INFO	geckodriver 0.19.1
+1526565114797	geckodriver	INFO	Listening on 127.0.0.1:1287
+1526565117868	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.9a4rmKj12XVf"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526565118416	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526565120208	Marionette	INFO	Listening on port 1295
+1526565120978	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=30662814, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=30662814, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=30662814 line 1 > eval, line 1: unreachable code after return statement
+[Parent 8460, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 8460, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/[Parent 8460, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14604, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/c1526567140439	geckodriver	INFO	geckodriver 0.19.1
+1526567140452	geckodriver	INFO	Listening on 127.0.0.1:2240
+1526567143550	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.XtdgmeiV4pX7"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526567144128	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526567145986	Marionette	INFO	Listening on port 2250
+1526567146670	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1568593005, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1568593005, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1568593005 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 748, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 748, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 748, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10016, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10016, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, lin1526567191996	geckodriver	INFO	geckodriver 0.19.1
+1526567192007	geckodriver	INFO	Listening on 127.0.0.1:2314
+1526567195085	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.yabKhoxW4rPX"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526567195696	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526567197578	Marionette	INFO	Listening on port 2326
+1526567198196	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 12836, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12836, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3604, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/b[Parent 12836, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12640, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12640, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 13804, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526571246924	geckodriver	INFO	geckodriver 0.19.1
+1526571246937	geckodriver	INFO	Listening on 127.0.0.1:5909
+1526571250009	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.p5VjLqWHuvM6"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526571250580	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526571252420	Marionette	INFO	Listening on port 5918
+1526571253118	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1899775022, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1899775022 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1526571278324	geckodriver	INFO	geckodriver 0.19.1
+1526571278337	geckodriver	INFO	Listening on 127.0.0.1:6022
+1526571281412	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.G9G4iAnMdghH"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526571281988	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526571283910	Marionette	INFO	Listening on port 6031
+1526571284542	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1006464148, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1006464148, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1006464148 line 1 > eval, line 1: unreachable code after return statement
+1526571385367	geckodriver	INFO	geckodriver 0.19.1
+1526571385380	geckodriver	INFO	Listening on 127.0.0.1:6189
+1526571388473	mozrunner::runner	INFO	Running command: "D:\\Program Files\\fireFox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofile.ZFMNXCBnlmGW"
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526571389108	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\dell\AppData\Local\openvr\openvrpaths.vrpath
+1526571390974	Marionette	INFO	Listening on port 6198
+1526571391586	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1121935039, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1121935039, line 1: unreachable code after return statement
+JavaScript warning: http://www.yfcp828.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1121935039 line 1 > eval, line 1: unreachable code after return statement
+[Parent 4440, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 4440, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8496, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8496, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/[Child 8800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8800, Chrome_ChildThread] WARNING: pipe error: 109: file [Parent 4440, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 624, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 624, Chrome_ChildThread] WARNIN*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
