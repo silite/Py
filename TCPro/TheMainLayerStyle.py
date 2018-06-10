@@ -130,12 +130,12 @@ class Ui_Form(object):
         self.pushButton_11.setGeometry(QtCore.QRect(42, 1652, 458, 57))
         self.pushButton_11.setStyleSheet("font: 9pt \"Arial\";")
         self.pushButton_11.setObjectName("pushButton_11")
-
+    
         self.retranslateUi(Form)
         self.pushButton.clicked.connect(Form.close)
         self.pushButton_3.clicked.connect(Form.showMinimized)
         QtCore.QMetaObject.connectSlotsByName(Form)
-
+    
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
@@ -151,7 +151,7 @@ class Ui_Form(object):
         self.pushButton_9.setText(_translate("Form", "History"))
         self.label.setText(_translate("Form", "<html><head/><body><p align=\"center\">暂无新消息</p></body></html>"))
         self.pushButton_11.setText(_translate("Form", "Commit Ehciy"))
-        file = QtCore.QFile('css.css')
+        file = QtCore.QFile('.\css.css')
         file.open(QtCore.QFile.ReadOnly)
         styleSheet = file.readAll()
         styleSheet = str(styleSheet, encoding='utf8')
