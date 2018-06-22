@@ -1,11 +1,12 @@
 from PIL import Image
 import os, screenshot, time, sys
 
+DEBUG = False
 WIDTH = 1080
 BLOCK_RGB = (59, 59, 59, 255)  #块平台RGBA
 CENTER_SCREEN_WIDTH = 540
-CENTER_FIRST_BLOCK = 731  #第一层块中心高
-FIRST_BLOCK_LEFT = 300    #预设纵向扫描左间距
+CENTER_FIRST_BLOCK = 742  #第一层块中心高
+FIRST_BLOCK_LEFT = 309    #预设纵向扫描左间距
 FIRST_BLOCK_RIGHT = 780
 START_LEFT = 112          #开始扫描初始化
 START_RIGHT = 960
@@ -34,25 +35,27 @@ def Get_LEFT_BLOCK_BORDER():
     for iter_width in range(START_LEFT, CENTER_SCREEN_WIDTH):
         NOW_RGB = RGBList[CENTER_FIRST_BLOCK * WIDTH + iter_width]
         LEFT_BLOCK_BORDER = iter_width
-        if NOW_RGB == (57, 57, 57, 255) and LEFT_BLOCK_BORDER < 490: #RGBA为块阴影 后者规避落点球颜色重合
+        if NOW_RGB == (57, 57, 57, 255) and LEFT_BLOCK_BORDER < 420: #RGBA为块阴影 后者规避落点球颜色重合
             if LEFT_BLOCK_BORDER < 150:  #遇到刚开始向右扫描时就扫到上述阴影
-                return 400 #需修改
+                return 350 #需修改
             break
         if NOW_RGB[0] > 150 and NOW_RGB != ORANGE_BLOCK_RGB:
-            return CENTER_SCREEN_WIDTH - LEFT_BLOCK_BORDER + 100
+            return CENTER_SCREEN_WIDTH - LEFT_BLOCK_BORDER + 50
     """
         当出现上述角度过大时  纵向扫描
     """
+
     if LEFT_BLOCK_BORDER < 200 or LEFT_BLOCK_BORDER > 530: #原小于315
-        for iter_height in range(250):
-            NOW_RGB = RGBList[FIRST_BLOCK_LEFT + (CENTER_FIRST_BLOCK - iter_height) * WIDTH]
-            if NOW_RGB != BLOCK_RGB:
+        for iter_height in range(240):
+            NOW_RGB = RGBList[FIRST_BLOCK_LEFT - 40 + (CENTER_FIRST_BLOCK - iter_height) * WIDTH]
+            SIDE_RGB = RGBList[FIRST_BLOCK_LEFT - 80 + (CENTER_FIRST_BLOCK - iter_height) * WIDTH]
+            if NOW_RGB[0] > 100 or SIDE_RGB[0] > 100 or NOW_RGB == (56, 56, 56, 255):
                 LEFT_BLOCK_BORDER += iter_height #应计算旋转角度后的长度  暂定需修改
                 break
     """
         左侧无 超出阈值
     """
-    if LEFT_BLOCK_BORDER == 766:
+    if LEFT_BLOCK_BORDER > 748:
         LEFT_BLOCK_BORDER = 0
 
     return LEFT_BLOCK_BORDER
@@ -71,32 +74,32 @@ def Get_RIGHT_BLOCK_BORDER():
         NOW_RGB = RGBList[CENTER_FIRST_BLOCK * WIDTH + iter_width]
         RIGHT_BLOCK_BORDER = iter_width
         if NOW_RGB[0] == NOW_RGB[1] == NOW_RGB[2] and NOW_RGB[0] < 59: #需修改
-            if RIGHT_BLOCK_BORDER > 800:
+            if RIGHT_BLOCK_BORDER < 800:
                 return 400
             break
         if NOW_RGB[0] > 150 and NOW_RGB != ORANGE_BLOCK_RGB:
             return RIGHT_BLOCK_BORDER - CENTER_SCREEN_WIDTH + 100
-    print(RIGHT_BLOCK_BORDER)
     """
         当出现上述角度过大时  纵向扫描
     """
-    RIGHT_BLOCK_BORDER = WIDTH - RIGHT_BLOCK_BORDER
-    if RIGHT_BLOCK_BORDER < 200 or RIGHT_BLOCK_BORDER > 530:
-        print("角度过大")
+    RIGHT_BLOCK_BORDER = RIGHT_BLOCK_BORDER - CENTER_SCREEN_WIDTH
+    if RIGHT_BLOCK_BORDER < 200 or RIGHT_BLOCK_BORDER > 410:
+        print(RIGHT_BLOCK_BORDER)
         for iter_height in range(250):
             NOW_RGB = RGBList[FIRST_BLOCK_RIGHT + (CENTER_FIRST_BLOCK - iter_height) * WIDTH]
             if NOW_RGB != BLOCK_RGB:
-                RIGHT_BLOCK_BORDER += iter_height
+                RIGHT_BLOCK_BORDER += iter_height + 150
                 break
 
     return RIGHT_BLOCK_BORDER
 
 
 def GetSwipeDistance(border):
+    print(border)
     if border > 650:
-        distance = border // 1.8
+        distance = border // 2
     elif 650 >= border > 400:
-        distance = border // 2.6
+        distance = border // 2.8
     elif 400 >= border:
         distance = border // 2.2
     else:
@@ -111,7 +114,8 @@ def SwipeScreen(method, distance):
 
 def main():
     while True:
-        screenshot.GetScreenShot()
+        if not DEBUG:
+            screenshot.GetScreenShot()
         im = Image.open("./happyball.png")
         global RGBList
         RGBList = im.getdata()
@@ -119,11 +123,13 @@ def main():
             LEFT_BLOCK_BORDER = Get_LEFT_BLOCK_BORDER()
             if LEFT_BLOCK_BORDER != 0:
                 method = 'left'
+                print(method)
                 distance = GetSwipeDistance(LEFT_BLOCK_BORDER)
                 SwipeScreen(method, distance)
             else:
                 RIGHT_BLOCK_BORDER = Get_RIGHT_BLOCK_BORDER()
                 method = 'right'
+                print(method)
                 distance = GetSwipeDistance(RIGHT_BLOCK_BORDER)
                 SwipeScreen(method, distance)
             time.sleep(2)
