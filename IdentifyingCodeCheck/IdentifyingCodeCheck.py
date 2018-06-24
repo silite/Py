@@ -68,20 +68,18 @@ def GetTrack(distance):
     mid_distance = distance / 2
     now_distance = 0
     track = []
-    for i in range(distance):
-        track.append(1)
-    # while now_distance <= distance:
-    #     if now_distance < mid_distance:
-    #         a = 2
-    #     else:
-    #         a = -2
-    #     v = v0 + a * t
-    #     v0 = v
-    #     x = v * t + 1 / 2 * a * t * t
-    #     if x < 0:
-    #         x = 0 - x
-    #     now_distance += x
-    #     track.append(round(x))
+    while now_distance <= distance:
+        if now_distance < mid_distance:
+            a = 2
+        else:
+            a = -2
+        v = v0 + a * t
+        v0 = v
+        x = v * t + 1 / 2 * a * t * t
+        if x < 0:
+            x = 0 - x
+        now_distance += x
+        track.append(round(x))
     return track
 def main():
     if DEBUG:
@@ -96,7 +94,6 @@ def main():
             RGBList_2 = Image.open('./cropped2.png').getdata()
             distance = GetDistance(RGBList_1, RGBList_2)
             distance = round(distance / 490 * 200)
-            print(distance)
             track = GetTrack(distance)
             MoveElement(track)
             time.sleep(2)
